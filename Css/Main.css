@@ -1,0 +1,30 @@
+﻿.qsfButtonBigger
+{
+	width:95px;
+	min-height:24px;
+	font-size:11px;
+	line-height:20px;
+	border:0;
+	background:url(Images/qsfButton95.gif) no-repeat #a8d1cc;
+}
+
+.qsfButtonBigger
+{
+	width:150px;
+	background:url(Images/qsfButton150.gif) no-repeat #a8d1cc;
+}
+
+* html .qsfButtonBigger
+{height:24px}
+
+a.qsfButtonBigger
+{
+	display:block;
+}
+
+.module1
+{
+    background-color: #ffffff;
+    border: 1px solid #c6e1f2;    
+}
+

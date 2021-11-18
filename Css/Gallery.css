@@ -1,0 +1,53 @@
+﻿
+.Discount
+{
+    color: blue;
+    text-transform: none;    
+    font-size:14pt;
+}
+
+.DiscountSlash
+{
+    color: #FF0000;
+    text-transform: none;
+    text-decoration: line-through;
+    font-size:14pt;
+}
+
+.itemTemplate
+{
+	text-align:center;
+	padding:20px;
+    font-size:12px;	
+ }
+ 
+ infoPane
+{
+	background-color: #fff;
+	background-image: url(../Images/Gallery/infoPaneBg.gif);
+	background-repeat: no-repeat;
+}
+.infoPaneBg
+{
+	margin-top: 20px;
+	background-color: #fff;
+	background-image: url(../Images/Gallery/grayBg.gif);
+	background-repeat: no-repeat;
+	height: 192px;
+	width: 272px;
+}
+	 
+.RotatorImage
+{	
+	cursor:hand;
+	cursor: pointer;
+}	 
+
+.GalleryTitle
+{
+    background: url(../Images/Gallery/title_bg.gif) repeat-x;
+    width:100%;
+    padding:5px;
+    font-size:14pt;
+    border:1px solid #E8E8D9;
+}

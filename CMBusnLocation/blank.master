@@ -1,0 +1,26 @@
+﻿<%@ Master Language="VB" CodeFile="blank.master.vb" Inherits="Test" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <link href="../main.css" rel="stylesheet">
+</head>
+
+    <body>
+        <form id="form2" runat="server">
+            <asp:ScriptManager ID="ScriptManager1" runat="server" /> 
+        <div class="container body-content">
+            <asp:ContentPlaceHolder ID="BodyContent" runat="server">
+            </asp:ContentPlaceHolder>
+            
+        </div>
+             </form>
+<script type="text/javascript" src="../assets/scripts/main.js"></script></body>
+
+</html>

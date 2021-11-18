@@ -1,0 +1,31 @@
+﻿<%@ Master Language="VB" CodeFile="popup.master.vb" Inherits="Test" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <link href="../main.css" rel="stylesheet">
+</head>
+
+    <body>
+        <form id="form2" runat="server">
+            <asp:ScriptManager ID="ScriptManager1" runat="server" /> 
+        <div class="container body-content">
+            <asp:ContentPlaceHolder ID="BodyContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <hr />
+            <footer>
+                <div class="page-hero d-flex align-items-center justify-content-center">
+                <p>&copy; Copyright ©  <%= Year(Now)%> Chong Motor Sdn Bhd (000490495-U). All rights reserved.</p>
+              </div>
+            </footer>
+        </div>
+             </form>
+<script type="text/javascript" src="../assets/scripts/main.js"></script></body>
+
+</html>

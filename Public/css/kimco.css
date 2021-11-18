@@ -1,0 +1,72 @@
+
+body{
+    background-color:#003032;
+}
+
+header.hero {
+    height: 530px;
+    background-image: url(/assets/hero.png);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    border-bottom: 1px solid #ddd;
+}
+
+header.hero2 {
+    height: 530px;
+    background-image: url(/assets/hero.png);   
+    background-repeat: no-repeat;
+    background-position: -160px 150px;
+    background-size: 180%;
+    overflow: hidden;
+}
+
+a.hero {
+    color:white;
+}
+
+.items-center {
+    align-items: center;   
+}
+
+.flex {
+    display: flex;
+}
+
+.btn-primary {
+    color: #000;
+}
+
+.icon-ob:hover {
+    background-color: #eee;
+}
+
+h1 {
+    color: #404040;
+}
+
+.radio-inline label {
+    margin-left: 3px !important;
+    margin-right: 15px !important;
+    font-size:16px;
+}
+
+.TitleText {
+    font-weight: bold;
+    margin: 0;
+    font-size:30px;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    margin: 20px 0 30px;
+    text-shadow: 1.5px 1.5px 6px #303030;
+}
+
+.TitleSmall {
+    font-weight: bold;
+    margin: 0;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    margin: 20px 0 30px;
+    text-shadow: 1.5px 1.5px 6px #303030;
+}

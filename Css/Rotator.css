@@ -1,0 +1,67 @@
+﻿.top
+{
+	width: 402px;
+	background-image: url(../Images/ForeCast/top.gif);
+	padding-top: 26px;
+}
+.details 
+{
+	width: 402px;
+	height: 94px;
+	/*background-image: url('../Images/ForeCast/cellBg.gif');*/
+	padding-top: 26px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 16px;
+	margin: 0px;
+	background-repeat: repeat-y;
+}
+.bottom 
+{
+	width: 402px;
+	height: 26px;
+	background-image: url('../Images/ForeCast/bottom.gif');
+}
+.day 
+{
+	width: 93px;
+	height: 94px;
+	background-color: #fafaf7;
+	float: left;
+}
+.paneCenter 
+{
+	width: 84px;
+	height: 94px;
+	background-image: url(../Images/ForeCast/paneCenter.gif);
+	background-color: #fafaf7;
+	float: left;
+	background-repeat: no-repeat;
+}
+.paneCenter_Text 
+{
+	text-transform: uppercase;
+	font: normal 11px Arial, Verdana, Helvetica;
+	color: #798048;
+	margin-top: 17px;
+	margin-left: 10px;
+}
+.paneDetails 
+{
+	width: 183px;
+	height: 94px;
+	background-image: url(../Images/ForeCast/paneDetails.gif);
+	background-color: #fafaf7;
+	float: left;
+	font: normal 11px Arial, Verdana, Helvetica;
+	color: #5c6c6a;
+	background-repeat: no-repeat;
+	text-align: center;
+}
+.paneDetails_Text 
+{
+	font: normal 11px Arial, Verdana, Helvetica;
+	color: #798048;
+	padding-top: 36px;
+	padding-left: 10px;
+}

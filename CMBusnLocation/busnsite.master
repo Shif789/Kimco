@@ -1,0 +1,61 @@
+﻿<%@ Master Language="VB" CodeFile="busnsite.master.vb" Inherits="PHM_MasterPage" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <!-- Meta tags and CSS reference needed for bootstrap -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../Content/bootstrap.min.css" rel="stylesheet">
+    <link href="../Css/Header4.css" rel="stylesheet">
+    <link href="../Css/Header3.css" rel="stylesheet">
+    <link href="../Css/shine.css" rel="stylesheet" />
+
+    <title>Kimco Lotto - Where Miracle Happen</title>
+    <link
+      rel="shortcut icon"
+      href="../assets/favicon.png"
+      type="image/x-icon"
+    />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="stretched" <%--style="padding-top: 20px;"--%>>
+    <style>
+        .c-golden {
+            color: #FFD700 !important;
+        }
+        .bg-golden {
+            background-color: #FFD700 !important;
+        }
+        .c-kimco{
+            color:#003032 !important;
+        }
+        .bg-kimco{
+            background-color:#003032 !important;
+        }
+    </style>
+    <form id="form1" runat="server">
+      
+        <div class="<%--container--%> body-content">
+            <asp:ContentPlaceHolder ID="BodyContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <hr />
+            <footer style="background-color:#003032">
+                <div class="page-hero d-flex align-items-center justify-content-center">
+                <p class="text-white">&copy; Copyright <%= Year(Now()) %> Kimco Lotto. All rights reserved.</p>
+                    </div>
+            </footer>
+        </div>
+    </form>
+
+    <!-- jQuery and Bootstrap JS files -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="../Scripts/headerNew.js"></script>
+    <script src="../Scripts/jquery-3.0.0.min.js"></script>
+    <script src="../Scripts/popper.min.js"></script>
+    <script src="../Scripts/bootstrap.bundle.js"></script>
+    <script src="https://kit.fontawesome.com/ccf7730c24.js"></script>
+</body>
+</html>
