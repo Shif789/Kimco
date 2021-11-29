@@ -1,9 +1,6 @@
-﻿<%@ Page Title="" Language="VB" MasterPageFile="~/CMBusnLocation/busnsite.master" AutoEventWireup="false" CodeFile="resultToday.aspx.vb" Inherits="CMBusnLocation_4D" %>
+﻿<%@ Page Title="" Language="VB" MasterPageFile="~/CMBusnLocation/busnsite.master" AutoEventWireup="false" CodeFile="jackpot4D.aspx.vb" Inherits="CMBusnLocation_jackpot4D" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
-    <link href="../Css/Header4.css" rel="stylesheet">
-    <link href="../Css/Header3.css" rel="stylesheet">
-    <link href="../Css/shine.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="BodyContent" Runat="Server">
     <style>
@@ -40,6 +37,25 @@
         .round-solid-border{
             border:1px solid #d3d3d3;
             border-radius:20px;
+        }
+        .tbl-2 tr:nth-child(odd) {
+            background-color: #e6e6e6;
+        }
+        .tbl-2 tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .tbl-2 th {
+            background-color: #003032;
+            color: white;
+            font-weight: bold;
+            width: calc(100%/6);
+            padding: 5px 10px;
+            font-size: 13px;
+            text-transform: uppercase;
+        }
+        .tbl-2 td {
+            padding: 5px 10px;
+            font-size: 13px;
         }
         .tbl-5{
             width:100%;
@@ -481,7 +497,7 @@
             position: absolute;
             /* width: calc(100%/4); */
             height: 100%;
-            background: #c1272d;
+            background: #003032;
             top: 0;
             left: 0;
             border-radius: 5rem;
@@ -760,21 +776,21 @@
             margin: auto;
         }
         .res-tbl-1.res-tbl-1-yellow {
-    border-collapse: unset;
-    box-shadow: unset;
-    border-top-right-radius: 15px;
-    border-top-left-radius: 15px;
-    border-spacing: 1px;
-}
+            border-collapse: unset;
+            box-shadow: unset;
+            border-top-right-radius: 15px;
+            border-top-left-radius: 15px;
+            border-spacing: 1px;
+        }
 
-.res-tbl-1 {
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    overflow: hidden;
-    box-shadow: 1px 1px 5px #00000052;
-    margin: 0;
-    font-size: 1.2rem;
-}
+        .res-tbl-1 {
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            overflow: hidden;
+            box-shadow: 1px 1px 5px #00000052;
+            margin: 0;
+            font-size: 1.2rem;
+        }
 .res-tbl-1.res-tbl-1-yellow th {
     color: #e7d766;
     padding: 5px;
@@ -1108,9 +1124,107 @@ a {
                 padding-right: 40px !important;
             }
         }
-        /*font class*/
+        
         .font-family-raleway {
             font-family: 'Raleway' !important;
+        }
+        /*font class*/
+        .datepicker.default {
+            background: no-repeat center;
+            background-color: white;
+            background-position-x: 98%;
+            background-size: 21px;
+        }
+        .large-font {
+            font-size: 1rem;
+        }
+        .content-wrap {
+            padding: 0 0 30px 0 !important;
+
+        }
+        select.select-center {
+            text-align-last: center;
+        }
+        .res-add {
+            /* position: relative; */
+            transition: linear 0.2s;
+        }
+        .res-add:hover {
+            /* box-shadow: inset 0px 0px 7px #0000004a !important; */
+            background-color: #dbdbdb;
+            cursor: pointer;
+        }
+        .tbl-3.tbl-3--mod1 {
+            width: 100%;
+        }
+
+        .tbl-3 {
+            margin-bottom: 15px;
+        }
+        .tbl-3.tbl-3--mod1 tr {
+            background-color: lightgray;
+            transition: linear 0.5s;
+        }
+        .tbl-3.tbl-3--mod1 tr:first-child th {
+            background-color: black;
+            color: #e7d766;
+        }
+        .tbl-3.tbl-3--mod1 th {
+            background-color: gray;
+            color: white;
+        }
+        .tbl-3 tr td:first-child {
+            font-weight: bold;
+        }
+
+        .tbl-3.tbl-3--mod1 td {
+            padding: 0.5rem;
+        }
+        .tbl-3 tr td input {
+            text-align: center;
+        }
+        .w100 {
+            width: 100% !important;
+        }
+
+        .bg-black-gold-stroke {
+            background-color: #000;
+            border: 7px solid #fff760;
+            border-radius: 30px;
+        }
+        .c-sunglow {
+            color: #fbc931 !important;
+        }
+
+        .bonusjp-box {
+            position: absolute;
+            width: 100%;
+            top: 44%;
+            line-height: 1;
+            color: white;
+            font-size: 26px;
+        }
+        .bonusjp-box {
+            font-size: 17px;
+        }
+        .c-yellow {
+            color: #ffe317;
+        }
+        .bonusjp-box .fbig {
+            font-size: 22px;
+            font-weight: unset;
+        }
+        .jpunits-box {
+            position: absolute;
+            color: white;
+            top: 13%;
+            width: 100%;
+            font-size: 21px;
+            font-size: 1.2rem;
+        }
+        .jpunits-box {
+            top: 15%;
+            font-size: 18px;
         }
 
     </style>
@@ -1237,494 +1351,163 @@ a {
 
             </header>
     <!-- END HEADER -->
-    <%--<div class="banner-box">
-        <img src="../assets/images/KIMCO ICONS/home-cover_en-us.jpg" class="m-hide img-fluid" />
-        <img src="../assets/images/KIMCO ICONS/home-cover-mob_en-us.jpg" class="xl-hide img-fluid" />
-        <%--<div class="banner-box-title v-mid">
-        <div>
-            <span <%--style="color:white; font-size:50px; font-weight:bold; border-bottom:2px solid white; text-shadow:3px 3px 5px #000000" class="d-inline-block text-uppercase mb-2">Contact Us</span>
-        </div>
-        </div>
-    </div>--%>
-   <section id="content" style="margin-bottom: 0px;">
-
-        
-        <div class="content-wrap bg-kamekame" id="result-section" style="padding:0 0 30px 0">
-            <div class="container clearfix" style="padding-left: 15px !important; padding-right: 15px !important;">
-                <h2 class="text-white text-center font-family-raleway pt-5 pb-3">TODAY RESULT</h2>
-                <div class="pt-3">
-
-                    
-
-                    <div id="ajax_res4d" class="skeleton-1">
-<div class="row mb-3">
-    <div class="col-12">
-        <div class="dragonjp">
-            <div class="row p-4">
-                <div class="col-md-4 v-mid">
-                    <div class="v-mid p-2 p-md-3 mb-2 mb-md-0">
-                        <img class="w-100" src="../assets/images/KIMCO ICONS/dragonjp_red.png">
-                        <div class="djp-dt">
-                            15 AUG 2021, SUNDAY<br>
-                            <span>next draw : 22 AUG 2021, SUN</span>
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-8 pl-md-0 pr-md-4 v-mid">
-                    <div class="djp-pool icon shine-3">
-                        <span class="7d_JPool">USD70,000.00</span>
-                    </div>
-                    <div class="row text-center">
-                        <div class="col-md-4 pr-md-0 v-mid">
-                            <h4 class="bg-themered bg-themered-plate text-white p-2">
-                                GRAND PRIZE
-                            </h4>
-                        </div>
-                        <div class="col-md-8 pl-md-1 mt-1 mt-md-0">
-                            <div class="djp-res">
-                                <div class="djp-res-elm"><span class="L7_0">5</span></div>
-                                <div class="djp-res-elm"><span class="L7_1">8</span></div>
-                                <div class="djp-res-elm"><span class="L7_2">6</span></div>
-                                <div class="djp-res-elm"><span class="L7_3">0</span></div>
-                                <div class="djp-res-elm"><span class="L7_4">7</span></div>
-                                <div class="djp-res-elm"><span class="L7_5">7</span></div>
-                                <div class="djp-res-elm"><span class="L7_6">3</span></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row text-center mt-md-1 mt-2">
-                        <div class="col-md-4 pr-md-0 v-mid">
-                            <h4 class="bg-themered bg-gray-plate text-white p-2 txt15">
-                                CONSOLATION PRIZE
-                            </h4>
-                        </div>
-                        <div class="col-md-8 pl-md-1 mt-1 mt-md-0">
-                            <div class="djp-res djp-res-conz">
-                                <div class="djp-res-elm"><span>-</span></div>
-                                <div class="djp-res-elm"><span class="L7_1">8</span></div>
-                                <div class="djp-res-elm"><span class="L7_2">6</span></div>
-                                <div class="djp-res-elm"><span class="L7_3">0</span></div>
-                                <div class="djp-res-elm"><span class="L7_4">7</span></div>
-                                <div class="djp-res-elm"><span class="L7_5">7</span></div>
-                                <div class="djp-res-elm"><span class="L7_6">3</span></div>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="text-white text-justify text-md-right txt12 p-1 pr-2">
-                        * Click <a class="a-white" href="#"><b>HERE</b></a> to checkout our Consolation Prize Winner's listing
-                    </div>
-                    
-                </div>
-            </div>
+    <div class="banner-box">
+        <img src="../assets/images/KIMCO ICONS/20190507 web Cover-03.jpg" class="m-hide">
+        <img src="../assets/images/KIMCO ICONS/20190820 web Cover Mobile-05.jpg" class="xl-hide">
+        <div class="banner-box-title v-mid">
+            <div><span class="inline-block uppercase">Bonus Jackpot</span></div>
         </div>
     </div>
-</div>
 
-<div class="resultdate ajresultdate">
-    
-    <img src="../assets/images/KIMCO ICONS/datebgleft-yellow.png" class="rdt-left">
-    <img src="../assets/images/KIMCO ICONS/datebgright-yellow.png" class="rdt-right">
-    <div class="rdt-center text-white text-center p-2 font-weight-bold uppercase rdt-center--yellow">Date : 18/08/2021, Wednesday</div>
-</div>
+    <div class="content-wrap bg-verylightgray" id="result-section">
+        <div class="container clearfix  p-lg-3">
 
-<div id="result">
-    <div class="row">
-        <div class="col-md-7 col-xl-7 v-bottom">
-            <div class="text-center mt-3">
-                <table class="res-tbl-1 w-100 res-tbl-1-yellow">
-                    <thead>
-                        <tr>
-                            <th colspan="2">4D</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1st Prize</td>
-                            <td><span class="r">(<span id="1stAlph">K</span>)
-                            </span>
-                                <span id="1stPz">5799</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>2nd Prize</td>
-                            <td><span class="r">(<span id="2ndAlph">H</span>)
-                            </span>
-                                <span id="2ndPz">8463</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>3rd Prize</td>
-                            <td><span class="r">(<span id="3rdAlph">D</span>)
-                            </span>
-                                <span id="3rdPz">3705</span>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
 
-            <div class="text-center mt-3">
-                <table class="res-tbl-2 w-100 res-tbl-2-yellow">
-                    <thead>
-                        <tr>
-                            <th colspan="3">Special Prize</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><span class="r">A</span>
-                                <span id="PzA">6542</span>
-                            </td>
-                            <td><span class="r">B</span>
-                                <span id="PzB">9822</span>
-                            </td>
-                            <td><span class="r">C</span>
-                                <span id="PzC">0176</span>
-                            </td>
-                        </tr>
+            
 
-                        <tr>
-                            <td><span class="r">D</span>
-                                <span id="PzD">----</span>
-                            </td>
-                            <td><span class="r">E</span>
-                                <span id="PzE">5356</span>
-                            </td>
-                            <td><span class="r">F</span>
-                                <span id="PzF">5064</span>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td><span class="r">G</span>
-                                <span id="PzG">0565</span>
-                            </td>
-                            <td><span class="r">H</span>
-                                <span id="PzH">----</span>
-                            </td>
-                            <td><span class="r">I</span>
-                                <span id="PzI">0465</span>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td><span class="r">J</span>
-                                <span id="PzJ">0914</span>
-                            </td>
-                            <td><span class="r">K</span>
-                                <span id="PzK">----</span>
-                            </td>
-                            <td><span class="r">L</span>
-                                <span id="PzL">7524</span>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td colspan="3"><span class="r">M</span>
-                                <span id="PzM">0096</span>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="text-center mt-3">
-                <table class="res-tbl-2 w-100 res-tbl-2-yellow">
-                    <thead>
-                        <tr>
-                            <th colspan="3">Consolation Prize</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><span class="r">N</span>
-                                <span id="PzN">9629</span>
-                            </td>
-                            <td><span class="r">O</span>
-                                <span id="PzO">0644</span>
-                            </td>
-                            <td><span class="r">P</span>
-                                <span id="PzP">1644</span>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td><span class="r">Q</span>
-                                <span id="PzQ">4371</span>
-                            </td>
-                            <td><span class="r">R</span>
-                                <span id="PzR">7935</span>
-                            </td>
-                            <td><span class="r">S</span>
-                                <span id="PzS">1373</span>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td><span class="r">T</span>
-                                <span id="PzT">4022</span>
-                            </td>
-                            <td><span class="r">U</span>
-                                <span id="PzU">8073</span>
-                            </td>
-                            <td><span class="r">V</span>
-                                <span id="PzV">1192</span>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td colspan="3"><span class="r">W</span>
-                                <span id="PzW">7148</span>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-        </div>
-        <div class="col-md-5 col-xl-5">
-            <div class="h-100 flex-column d-flex">
-
-                <div class="text-center position-relative mt-3 mb-3 icon">
-                    <img src="../assets/images/KIMCO ICONS/4D_JPool_en-us.png" class="w-100">
-                    <div class="jppool-box">
-                        <div>
-                            <span id="4d_jpool">USD2,472,275.10</span>
+            <div class="pt-3 w-50 sm-100 m-auto">
+                <div class="mb-3 d-none">
+                    <div class="position-relative">
+                        
+                        <img src="/images/estjp_en-us.png" class="w-100">
+                        <div class="jp_estjp_container">
                             
-                            <span class="dtstamp dtstamp--mod2">As per Yesterday, 18 Aug 2021</span>
+                            <span class="dtstamp dtstamp--mod4" id="jpi-estjp">Latest Update : 23 Nov 2021, 12:00PM</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="resultdate">
+                    <img src="../assets/images/KIMCO ICONS/datebgleft.png" class="rdt-left">
+                    <img src="../assets/images/KIMCO ICONS/datebgright.png" class="rdt-right">
+                    <div class="rdt-center text-white text-center p-2 font-weight-bold uppercase">Date : 22/11/2021, Monday</div>
+                </div>
 
+
+                <div id="result">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="text-center position-relative mt-3 icon">
+                                <img src="../assets/images/KIMCO ICONS/WebUIv2-39.png" class="w-100 m-hide">
+                                <img src="../assets/images/KIMCO ICONS/bg_jppool_en-us.png" class="w-100 xl-hide">
+                                <div class="jppool-box">
+                                    <span id="4d_jpool">USD3,512,958.81</span>
+                                    
+                                    <span class="dtstamp dtstamp--mod2">As per Yesterday, 22 Nov 2021</span>
+                                </div>
+                            </div>
+
+                            <div class="text-center position-relative mt-3">
+                                <img src="../assets/images/KIMCO ICONS/bjp_4.png" class="w-100 m-hide">
+                                <img src="../assets/images/KIMCO ICONS/WebUIv2-04.png" class="w-100 xl-hide">
+                                <div class="bonusjp-box">
+                                    <div class="c-yellow fbig">
+                                       <span id="4d_jpbonus">No Bonus</span>
+                                    </div>
+                                    <div class="c-yellow fbig">
+                                        <span id="4d_jpalphnum">A : 5488</span>
+                                    </div>
+                                    <div class="pt-2">
+                                       <span id="4d_jpperunit">USD0.00/unit</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="text-center position-relative mt-3">
+                                <img src="../assets/images/KIMCO ICONS/WebUIv2-07.png" class="w-100 m-hide">
+                                <img src="../assets/images/KIMCO ICONS/WebUIv2-06.png" class="w-100 xl-hide">
+                                <div class="jpunits-box">
+                                    <div class="">
+                                        Number of Units : <span id="4d_jptotalunit">0</span>
+                                    </div>
+                                    <div>
+                                        <span id="4d_jppayout">USD0.00 ( USD3,512,958.81 x 0% )</span>
+                                    </div>
+                                    <div>
+                                        <span id="4d_jppyperwin">USD0.00 ( USD0.00 / 0 )</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="flex-fill">
+            </div>
 
-                    <div class="fourd-jp-v2 v-mid p-4">
-                        <img class="w-100 m-auto-hori mb-3" src="../assets/images/KIMCO ICONS/jp-result_en-us.png">
-                        <div class="fourd-jp-v2-top">
-                            <div class="fourd-header">
-                                <span id="4d_jpbonus">No Bonus</span>
-                            </div>
-                            <div>
-                                <span id="4d_jpalphnum">A : 6542</span>
-                            </div>
-                            <div>
-                                <span id="4d_jpperunit" class="c-gold">USD0.00/unit</span>
-                            </div>
-                        </div>
-                        <hr class="white-translucent w-75">
-                        <div class="fourd-jp-v2-btm">
-                            <div class="fourd-header">
-                                Number of Units : <span id="4d_jptotalunit">0</span>
-                            </div>
-                            <div>
-                                <span id="4d_jppayout">USD0.00 ( USD2,472,275.10 x 0% )</span>
-                            </div>
-                            <div>
-                                <span id="4d_jppyperwin" class="c-gold">USD0.00 ( USD0.00 / 0 )</span>
-                            </div>
-                        </div>
-                    </div>
+            <div class="text-center mt-3">
+                <h3 class="m-0 text-white bg-golden text-center uppercase">Previous Results</h3>
+                <div class="w-75 sm-100 m-auto pt-2 overflow-x-auto">
+                    <table class="tbl-2 w-100 mb-0">
+                        <thead>
+                            <tr>
+                                <th>Number</th>
+                                <th>Date</th>
+                                <th>Prize Type</th>
+                                <th>Total Prize</th>
+                                <th>Number of Units</th>
+                                <th>Prize Per Unit</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            <tr>
+                                <td><span class="text-danger">A 6342</span></td>
+                                <td>18/09/2021</td>
+                                <td>Big Bonus</td>
+                                <td>USD 3,612,313.75 x 50%<br>
+                                    <b>USD 1,806,156.88</b></td>
+                                <td>103</td>
+                                <td><span class="text-danger">USD 17,535.00</span></td>
+                            </tr>
+                            
+                            <tr>
+                                <td><span class="text-danger">A 1350</span></td>
+                                <td>02/08/2021</td>
+                                <td>Big Bonus</td>
+                                <td>USD 3,738,903.09 x 50%<br>
+                                    <b>USD 1,869,451.54</b></td>
+                                <td>466</td>
+                                <td><span class="text-danger">USD 4,011.00</span></td>
+                            </tr>
+                            
+                            <tr>
+                                <td><span class="text-danger">A 0644</span></td>
+                                <td>20/05/2021</td>
+                                <td>Big Bonus</td>
+                                <td>USD 2,415,525.60 x 50%<br>
+                                    <b>USD 1,207,762.80</b></td>
+                                <td>78</td>
+                                <td><span class="text-danger">USD 15,484.00</span></td>
+                            </tr>
+                            
+                            <tr>
+                                <td><span class="text-danger">A 2568</span></td>
+                                <td>14/02/2021</td>
+                                <td>Super Bonus</td>
+                                <td>USD 3,311,641.87 x 100%<br>
+                                    <b>USD 3,311,641.87</b></td>
+                                <td>167</td>
+                                <td><span class="text-danger">USD 19,830.00</span></td>
+                            </tr>
+                            
+                            <tr>
+                                <td><span class="text-danger">A 2486</span></td>
+                                <td>21/10/2020</td>
+                                <td>Big Bonus</td>
+                                <td>USD 1,417,023.39 x 50%<br>
+                                    <b>USD 708,511.69</b></td>
+                                <td>62</td>
+                                <td><span class="text-danger">USD 11,427.00</span></td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
                 </div>
             </div>
+            
         </div>
     </div>
-    
-    <hr class="mt-4 mb-2 gold">
-    <div class="row" id="sec-6d">
-        <div class="col-12">
-            <div class="text-center mt-3">
-                <table class="res-tbl-1 res-tbl-1--6d res-tbl-1--6d-yellow w-100">
-                    <thead>
-                        <tr>
-                            <th colspan="14">6D</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1st <span class="m-hide">Prize</span></td>
-                            
-                            <td colspan="13">
-                                <div class="text-center sixd-firstpz">
-                                    <span class="L6_0">2</span>
-                                    <span class="L6_1">4</span>
-                                    <span class="L6_2">3</span>
-                                    <span class="L6_3">8</span>
-                                    <span class="L6_4">8</span>
-                                    <span class="L6_5">9</span>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>2nd <span class="m-hide">Prize</span></td>
-                            <td class="L6_0">2</td>
-                            <td class="L6_1">4</td>
-                            <td class="L6_2">3</td>
-                            <td class="L6_3">8</td>
-                            <td class="L6_4">8</td>
-                            <td class="void"><span></span></td>
-                            <td class="voidor">or</td>
-                            <td class="void"><span></span></td>
-                            <td class="L6_1">4</td>
-                            <td class="L6_2">3</td>
-                            <td class="L6_3">8</td>
-                            <td class="L6_4">8</td>
-                            <td class="L6_5">9</td>
-                        </tr>
-                        <tr>
-                            <td>3rd <span class="m-hide">Prize</span></td>
-                            <td class="L6_0">2</td>
-                            <td class="L6_1">4</td>
-                            <td class="L6_2">3</td>
-                            <td class="L6_3">8</td>
-                            <td class="void"><span></span></td>
-                            <td class="void"><span></span></td>
-                            <td class="voidor">or</td>
-                            <td class="void"><span></span></td>
-                            <td class="void"><span></span></td>
-                            <td class="L6_2">3</td>
-                            <td class="L6_3">8</td>
-                            <td class="L6_4">8</td>
-                            <td class="L6_5">9</td>
-                        </tr>
 
-                        <tr>
-                            <td>4th <span class="m-hide">Prize</span></td>
-                            <td class="L6_0">2</td>
-                            <td class="L6_1">4</td>
-                            <td class="L6_2">3</td>
-                            <td class="void"><span></span></td>
-                            <td class="void"><span></span></td>
-                            <td class="void"><span></span></td>
-                            <td class="voidor">or</td>
-                            <td class="void"><span></span></td>
-                            <td class="void"><span></span></td>
-                            <td class="void"><span></span></td>
-                            <td class="L6_3">8</td>
-                            <td class="L6_4">8</td>
-                            <td class="L6_5">9</td>
-                        </tr>
-
-                        <tr>
-                            <td>5th <span class="m-hide">Prize</span></td>
-                            <td class="L6_0">2</td>
-                            <td class="L6_1">4</td>
-                            <td class="void"><span></span></td>
-                            <td class="void"><span></span></td>
-                            <td class="void"><span></span></td>
-                            <td class="void"><span></span></td>
-                            <td class="voidor">or</td>
-                            <td class="void"><span></span></td>
-                            <td class="void"><span></span></td>
-                            <td class="void"><span></span></td>
-                            <td class="void"><span></span></td>
-                            <td class="L6_4">8</td>
-                            <td class="L6_5">9</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        <div class="col-12 mt-3 hidden">
-            <div class="row">
-                <div class="col-md-4  v-bottom">
-                    <div class="text-center position-relative icon">
-                        <img src="/images/6D_JPool_en-us.png" class="w-100">
-                        <div class="jppool-box">
-                            <div>
-                                USD574,870.65
-                                
-                                <span class="dtstamp dtstamp--mod2">As per Yesterday, 18 Aug 2021</span>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-8 ">
-
-                    <div class="sixd-jp-v2 v-mid p-4 m-hide">
-                        <img class="sm-100 w-50 m-auto-hori mb-4" src="/images/jp-result_en-us.png">
-                        <div class="row">
-                            <div class="col-md-6 v-mid sixd-jp-v2-left">
-                                <div class="sixd-header">
-                                    No Bonus
-                                </div>
-                                <div>
-                                    6542
-                                </div>
-                                <div class="c-gold">
-                                    USD0.00/unit
-                                </div>
-                                <hr class="white-translucent hr-vertical">
-                            </div>
-
-                            <div class="col-md-6 v-mid">
-                                <div class="sixd-header">
-                                    Number of Units : 0
-                                </div>
-                                <div>
-                                    USD0.00 ( USD574,870.65 x 0% )
-                                </div>
-                                <div class="c-gold">
-                                    USD0.00 ( USD0.00 / 0 )
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    
-                    <div class="fourd-jp-v2 v-mid p-4 mt-3 xl-hide">
-                        <img class="sm-100 w-75 m-auto-hori mb-3" src="/images/jp-result_en-us.png">
-                        <div class="fourd-jp-v2-top">
-                            <div class="fourd-header">
-                                No Bonus
-                            </div>
-                            <div>
-                                6542
-                            </div>
-                            <div>
-                                USD0.00/unit
-                            </div>
-                        </div>
-                        <hr class="white-translucent w-75">
-                        <div class="fourd-jp-v2-btm">
-                            <div class="fourd-header">
-                                Number of Units : 0
-                            </div>
-                            <div>
-                                USD0.00 ( USD574,870.65 x 0% )
-                            </div>
-                            <div>
-                                USD0.00 ( USD0.00 / 0 )
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-    </div>
-    
-</div>
-</div>
-                </div>
-            </div>
-        </div>
-
-    
-        
-    </section>
-
-    
-    <!--Scripts-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://kit.fontawesome.com/ccf7730c24.js"></script>
-    <script src="../Scripts/header1.js"></script>
+    <!--Script-->
     
 </asp:Content>
 

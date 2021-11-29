@@ -1,0 +1,2128 @@
+﻿<%@ Page Title="" Language="VB" MasterPageFile="~/CMBusnLocation/busnsite.master" AutoEventWireup="false" CodeFile="jackpotHowToWin.aspx.vb" Inherits="CMBusnLocation_jackpotHowToWin" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="BodyContent" Runat="Server">
+    <style>
+        
+        
+        .banner-box .banner-box-title span {
+            color: white;
+            font-size: 50px;
+            font-weight: bold;
+            border-bottom: 2px solid white;
+            text-shadow: 3px 3px 5px #000000c4;
+        }
+        
+
+        .c-themered {
+            color: #c1272d !important;
+        }
+        .banner-box {
+            position: relative;
+        }
+        .banner-box .banner-box-title {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            text-align: center;
+            top: 0;
+        }
+        .v-mid {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            flex-direction: column;
+        }
+        .round-solid-border{
+            border:1px solid #d3d3d3;
+            border-radius:20px;
+        }
+        .tbl-2 tr:nth-child(odd) {
+            background-color: #e6e6e6;
+        }
+        .tbl-2 tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .tbl-2 th {
+            background-color: #003032;
+            color: white;
+            font-weight: bold;
+            width: calc(100%/6);
+            padding: 5px 10px;
+            font-size: 13px;
+            text-transform: uppercase;
+        }
+        .tbl-2 td {
+            padding: 5px 10px;
+            font-size: 13px;
+        }
+        .tbl-5{
+            width:100%;
+            margin-bottom:0;
+            text-align:left;
+            min-width:450px;
+            font-size:0.8rem;
+        }
+        .tbl-5 td {
+           padding: 10px 0;
+        }
+        .round-span-themered {
+            color: white;
+            background: #c1272d;
+            border-radius: 30px;
+            font-weight: bold;
+            display: inline-block;
+        }
+        .round-span-black {
+            color: white;
+            background: #323232;
+            border-radius: 30px;
+            font-weight: bold;
+            display: inline-block;
+        }
+        .tbl-6 {
+            width: 100%;
+            text-align: left;
+            margin: 0;
+        }
+        .tbl-6 td {
+            padding: 2%;
+        }
+        .tbl-6 td:not(:last-child) {
+            border-right: 1px solid lightgray;
+        }
+        .gd-list {
+            list-style: none;
+            counter-reset: my-awesome-counter;
+            padding: 0;
+        }
+        .gd-list li::before {
+            content: "0" counter(my-awesome-counter); 
+            content: counter(my-awesome-counter);
+            color: white;
+            font-weight: bold;
+            background-color: #c1272d;
+            border-radius: 100px;
+            padding: 1px 10px;
+            text-align: center;
+            display: inline-block;
+            margin: 4px;
+            margin-right: 10px;
+            position: absolute;
+        }
+        .gd-list li {
+            counter-increment: my-awesome-counter;
+        }
+        .gd-list li {
+            padding-left: 0.5rem;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+        .gd-list * {
+            font-size: 0.9rem;
+        }
+        .round-dotted-border {
+            border: 1px dashed lightgray;
+            border-radius: 20px;
+        }
+        .tbl-1 {
+            min-width: 900px;
+            border-collapse: unset;
+            border-spacing: 2px;
+            width: 100%;
+        }
+        #lotterygame-section .tbl-1 {
+            min-width: 500px;
+        }
+        .tbl-1 tr:nth-child(odd) {
+            background-color: #e6e6e6;
+        }
+        #lotterygame-section .tbl-1 th:nth-child(1), #lotterygame-section .tbl-1 td:nth-child(1) {
+            text-align: left;
+        }
+        .tbl-1 th {
+            background-color: #c1272d;
+            color: white;
+            font-weight: bold;
+            width: calc(100%/6);
+            padding: 5px 10px;
+            font-size: 15px;
+        }
+        .tbl-1 td {
+            padding: 5px 10px;
+        }
+        .tbl-1 tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .gd-list li:last-child {
+            margin-bottom: 0;
+        }
+
+        .round-span-redborder {
+            color: #c1272d;
+            background: #fff;
+            border-radius: 30px;
+            font-weight: bold;
+            display: inline-block;
+            border: 1px solid #c1272d;
+        }
+        .f-sm {
+            font-size: 0.8rem;
+        }
+        .round-span-themered {
+            color: white;
+            background: #c1272d;
+            border-radius: 30px;
+            font-weight: bold;
+            display: inline-block;
+        }
+        .round-span-black {
+            color: white;
+            background: #323232;
+            border-radius: 30px;
+            font-weight: bold;
+            display: inline-block;
+        }
+        .v-top {
+            vertical-align: top;
+        }
+        #win {
+            text-align:left
+        }
+        .win .win-head {
+            background-color: #c1272d;
+            color: white;
+        }
+        .win .win-body {
+            font-size: 0;
+            display: flex;
+        }
+        .win .win-left {
+            background-color: #ececec;
+        }
+        .win .win-content {
+            flex: 0.5;
+            display: inline-block;
+            font-size: 13px;
+            vertical-align: top;
+        }
+        .win-type.selected, .win-cur.selected {
+            background-color: #c1272d;
+            color: white;
+        }
+        .win-type, .win-cur {
+            cursor: default;
+            display: inline-block;
+            background-color: #fff;
+            width: 49%;
+            padding: 5px;
+            text-align: center;
+            margin-bottom: 3px;
+            font-weight: 500;
+            box-shadow: 1px 1px 3px #8080808c;
+        }
+        .win-cur {
+            width: 24% !important;
+        }
+        /*input {
+            border: 0;
+            padding: 5px 3px;
+            box-shadow: 1px 1px 3px #8080808c;
+        }*/
+        label {
+            font-weight: 500;
+        }
+        /*label, input {
+            display: block;
+        }*/
+        .btn-calc {
+            width: 50%;
+            display: inline-block;
+            background-color: #c1272d;
+            color: white;
+            font-weight: 600;
+            border: 0;
+            border-radius: 30px;
+            font-size: 15px;
+        }
+        .win .win-right {
+            background-color: #262626;
+            color: white;
+        }
+        .win-title {
+            color: #f4d240;
+            font-weight: 600;
+            font-size: 20px;
+        }
+        .win-tbl1, .win-tbl2 {
+            color: white;
+            width: 100%;
+        }
+        .win-sub {
+            color: white;
+        }
+        .win-tbl2 tr td:nth-child(2) {
+            color: #f4d240;
+            font-size: 22px;
+            font-weight: bold;
+        }
+        .win-tbl2 tr td {
+            vertical-align: top;
+            padding: 5px;
+        }
+        .win-tbl2 tr td:nth-child(3) {
+            font-size: 12px;
+            padding-bottom: 10px;
+            color: greenyellow;
+        }
+        @media (max-width: 768px){
+            .win .win-content, .win .win-body {
+                display: block;
+            }
+            input {
+                width: 100%;
+            }
+            .btn-calc {
+                width: 100%;
+            }
+            .win-tbl2 td {
+                display: block;
+                box-sizing: border-box;
+                clear: both;
+            }
+            .postcontent, .postcontent.bothsidebar, .sidebar, .col_full, .col_half, .col_one_third, .col_two_third, .col_three_fourth, .col_one_fourth, .col_one_fifth, .col_two_fifth, .col_three_fifth, .col_four_fifth, .col_one_sixth, .col_five_sixth {
+                width: 100%;
+                margin-right: 0;
+                float: none;
+                margin-bottom: 50px !important;
+            }
+            form .col_full, form .col_half, form .col_one_third, form .col_two_third, form .col_three_fourth, form .col_one_fourth, form .col_one_fifth, form .col_two_fifth, form .col_three_fifth, form .col_four_fifth, form .col_one_sixth, form .col_five_sixth {
+                margin-bottom: 25px !important;
+            }
+            
+            /*#cur_selection{
+                text-align:left !important;
+            }*/
+        }
+
+        .box-6d-rounded {
+            max-width: 150px;
+            width: 100%;
+            margin: auto;
+            border: 1px solid #cdcdcd;
+            border-radius: 30px;
+            padding: 5px;
+            line-height: 1;
+        }
+        .box-6d-rounded .tbl-box-6d {
+            width: 100%;
+            table-layout: fixed;
+            text-align: center;
+            margin: 0;
+        }
+        .box-6d-rounded .tbl-box-6d td {
+            padding: 0 !important;
+            font-weight: bold;
+        }
+        .clean-tbl, .clean-tbl tr, .clean-tbl td {
+            margin: auto;
+            padding: 0 !important;
+            line-height: 1;
+        }
+        .box-6d-rounded .tbl-box-6d td.clr {
+            background-color: lightgray;
+        }
+        .or-mid {
+            padding: 5px 8px;
+            margin: 0 2px;
+            background-color: #585858;
+            color: white;
+            border-radius: 20px;
+        }
+        .mod-6d-long {
+            font-size: 1.1rem;
+            min-width: 715px;
+        }
+
+        .txt20 {
+            font-size: 20px;
+        }
+        .txt14 {
+            font-size: 14px;
+        }
+        .c-gray {
+            color: gray;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: #313131 !important;
+            font-family: Lato;
+        }
+        .tabs {
+            position: relative;
+            margin: 0 0 30px 0;
+        }
+        .imagetab {
+            border: 0;
+        }
+
+        .imagetab li {
+            flex-grow: 1;
+            flex-basis: 0;
+            border-radius: 0;
+            border-bottom: 0;
+        }
+        .imagetab.nav-tabs .nav-link.active, .imagetab.nav-tabs .nav-item.show .nav-link {
+            border-color: #c1272d;
+        }
+        .imagetab.nav-tabs .nav-link {
+            border: 1px solid transparent;
+            border-radius: 0;
+            border-bottom: 6px solid #dee2e6;
+        }
+        .tab-container {
+            position: relative;
+            padding: 20px 0 0;
+        }
+        .fluid-width-video-wrapper {
+            width: 100%;
+            position: relative;
+            padding: 0;
+        }
+        .v-bottom {
+            display: flex;
+            justify-content: flex-end;
+            align-content: center;
+            flex-direction: column;
+        }
+        h3 {
+            font-size: 24px;
+        }
+        .f-0 {
+            font-size: 0;
+        }
+        img{
+            max-width:100%;
+        }
+        .imagetab.nav-tabs .nav-link img {
+            width: 62px;
+        }
+        .w-20 {
+            width: 20%;
+        }
+        .bg-themered {
+            background-color: #003032 !important;
+        }
+        .txt36 {
+            font-size: 36px;
+        }
+        .txt12 {
+            font-size: 12px;
+        }
+        .inline-block {
+            float: none !important;
+            display: inline-block !important;
+        }
+        .m-auto-hori {
+            margin: 0 auto;
+        }
+        /*.slide-tab {
+            position: relative;
+        }
+        .slide-tab .slide-tab--ul {
+            list-style: none;
+            margin: 0;
+            display: flex;
+            text-align: center;
+            border: 2px solid gray;
+            border-radius: 5rem;
+        }
+        .slide-tab .slide-tab--ul li {
+    flex-grow: 1;
+    flex-basis: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 5px;
+    white-space: nowrap;
+    color: gray;
+        }
+        .slide-tab .slide-tab--bg {
+    position: absolute;
+    width: calc(100%/4); 
+    height: 100%;
+    background: #c1272d;
+    top: 0;
+    left: 0;
+    border-radius: 5rem;
+    transition: left 0.35s cubic-bezier(0, 0.81, 0.25, 1.22);
+    color: white;
+    font-weight: 700;
+    padding: 5px;
+    cursor: default;
+        }*/
+        .slide-tab {
+            position: relative;
+        }
+
+        .slide-tab .slide-tab--ul {
+                list-style: none;
+                margin: 0;
+                display: flex;
+                text-align: center;
+                border: 2px solid gray;
+                border-radius: 5rem;
+        }
+
+        .slide-tab .slide-tab--ul li {
+            flex-grow: 1;
+            flex-basis: 0;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            padding: 5px;
+            white-space: nowrap;
+            color: gray;
+        }
+
+        .slide-tab .slide-tab--ul li a {
+                color: gray;
+                font-weight: 600;
+        }
+
+        .slide-tab .slide-tab--ul li.ui-tabs-active {
+            color: white;
+        }
+
+    
+        .slide-tab .slide-tab--bg {
+            position: absolute;
+            /* width: calc(100%/4); */
+            height: 100%;
+            background: #003032;
+            top: 0;
+            left: 0;
+            border-radius: 5rem;
+            transition: left 0.35s cubic-bezier(0, 0.81, 0.25, 1.22);
+            color: white;
+            font-weight: 700;
+            padding: 5px;
+            cursor: default;
+        }
+
+        .slide-tab .slide-tab--bg .slide-tab--bgspn1 {
+            display: table;
+            table-layout: fixed;
+            height: 100%;
+            width: 100%;
+        }
+
+        .slide-tab .slide-tab--bg .slide-tab--bgspn1 .slide-tab--bgspn2 {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                text-align: center;
+                display: table-cell;
+                vertical-align: middle;
+        }
+
+        .slide-tab-dark .slide-tab .slide-tab--ul {
+            border: 2px solid #fff;
+        }
+
+        .slide-tab-dark .slide-tab .slide-tab--ul li, .slide-tab-dark .slide-tab .slide-tab--ul li a {
+            color: white;
+        }
+
+        .slide-tab-dark .slide-tab .slide-tab--bg {
+            background: #ae0001;
+        }
+        h1 > span:not(.nocolor):not(.badge), h2 > span:not(.nocolor):not(.badge), h3 > span:not(.nocolor):not(.badge), h4 > span:not(.nocolor):not(.badge), h5 > span:not(.nocolor):not(.badge), h6 > span:not(.nocolor):not(.badge) {
+            color: #c1272d;
+        }
+        .fancy-title.title-bottom-border h1, .fancy-title.title-bottom-border h2, .fancy-title.title-bottom-border h3, .fancy-title.title-bottom-border h4, .fancy-title.title-bottom-border h5, .fancy-title.title-bottom-border h6 {
+            border-bottom: 2px solid #c1272d;
+        }
+
+        /*Corporate Value*/
+        #corpvalue .heading-block h4, #corpvalue h2 {
+            color: #333 !important;
+        }
+        #corpvalue * {
+            font-family: 'Raleway';
+        }
+        /*Play Responsibility*/
+        h2, h3, h4 {
+            margin: 0 !important;
+        }
+        .bg-verylightgray {
+            background-color: #f1f2f2 !important;
+        }
+        .input-2.input-2--bigfont {
+            font-size: 1.2rem;
+        }
+        .input-2 {
+            padding: 0.2rem 0.6rem !important;
+            font-size: 0.8rem;
+            border: 1px solid gray;
+            min-width: 180px;
+            vertical-align: middle;
+            border-radius: 0 !important;
+        }
+        .btn-1 {
+            font-size: 0.7rem;
+            border-radius: 30px;
+            border: 0;
+            padding: 0.3rem 1rem;
+            color: white;
+            background-color: gray;
+            min-width: 100px;
+        }
+        .btn-2 {
+            font-size: 0.8rem;
+            border: 0;
+            padding: 0.5rem;
+            color: white;
+            background-color: gray;
+        }
+        .btn-1.btn-1-red, .btn-2.btn-2-red, .btn-3.btn-3-red {
+            background-color: #c1272d;
+        }
+        .btn-3 {
+            font-size: 0.8rem;
+            border: 0;
+            padding: 0.25rem 0.6rem;
+            color: white;
+            background-color: gray;
+            vertical-align: middle;
+        }
+        .on-hover-pointer:hover {
+            cursor: pointer;
+        }
+        .card-2-contact {
+            font-size: 0;
+            border-radius: 15px;
+        }
+        .card-2 {
+            box-shadow: 0 0 6px #00000038;
+            background-color: white;
+        }
+        .map_cty.map_cty--id {
+            top: 69%;
+            left: 27%;
+        }
+        .map_cty {
+            position: absolute;
+            width: 17%;
+            transition: ease .2s;
+        }
+        .map_cty.map_cty--my {
+            top: 52%;
+            left: 25%;
+        }
+        .map_cty.map_cty--th {
+            top: 32%;
+            left: 6.5%;
+        }
+        .map_cty.map_cty--vn {
+            top: 21%;
+            left: 35%;
+        }
+        .map_cty.map_cty--cb {
+            top: 22%;
+            left: 17.5%;
+        }
+        .map_cty.map_cty--mn {
+            left: 8.5%;
+            top: 11%;
+        }
+        .card-2-contact .c2con-img {
+            width: 25%;
+        }
+        .card-2-contact .c2con {
+            display: inline-block;
+            vertical-align: middle;
+            padding: 10px 15px;
+        }
+        .card-2-contact .c2con-text {
+            width: 75%;
+            font-size: 1rem;
+            height: 100%;
+            font-weight: bold;
+        }
+        .card-2-contact .c2con-img img {
+            width: 100%;
+        }
+        #content {
+            overflow: visible;
+            background-color: transparent !important;
+        }
+        .bg-kamekame {
+            background: url('../assets/images/KIMCO ICONS/wbg.png');
+            background-size: 100%;
+        }
+        .main-res {
+            padding-top: 9%;
+        }
+        .main-jp-tab {
+            position: absolute;
+            top: -6%;
+            width: 100%;
+        }
+        .animate-move-up {
+            transition:linear 0.1s;
+        }
+        .p-dot5 {
+            padding: 0.5%;
+        }
+        .bg-black {
+            background-color: #000 !important;
+        }
+        .dragonjp {
+            background: url('../assets/images/KIMCO ICONS/jppool-bg.png') center center;
+            background-size: 100% 100%;
+        }
+        .dragonjp .djp-dt {
+            /* text-align: center; */
+            font-weight: bold;
+            text-shadow: 2px 2px 2px #000000a6;
+            font-size: 1.5rem;
+            line-height: 1;
+            padding-top: 0.5rem;
+            color: #fff;
+        }
+        .dragonjp .djp-pool {
+            text-align: center;
+            background: linear-gradient(310deg, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+            box-shadow: 0px 4px 0 1px #87451a;
+            text-shadow: 1px 1px #f6ecae, -1px -1px #b38829;
+            border-radius: 62px;
+            color: #6e2d20;
+            /* font-weight: bolder; */
+            font-size: 45px;
+            font-family: tamba-bold;
+            margin-bottom: 15px;
+        }
+        .icon {
+            position: relative;
+            overflow: hidden;
+        }
+        .bg-themered-plate {
+            background-color: #003032 !important;
+            box-shadow: 0px 2px 0 1px #6f171b;
+            border-radius: 62px;
+        }
+        .bg-gray-plate {
+            background-color: #a4a4a4 !important;
+            box-shadow: 0px 2px 0 1px #676767;
+            border-radius: 62px;
+        }
+        .dragonjp .djp-res {
+            display: flex;
+            text-align: center;
+        }
+        .dragonjp .djp-res .djp-res-elm {
+            flex-grow: 1;
+            flex-basis: 0;
+            font-family: tamba-bold;
+            padding: 3px;
+        }
+        .dragonjp .djp-res .djp-res-elm span:first-child {
+            background-color: #fff;
+            display: inline-block;
+            width: 100%;
+            border-radius: 10px;
+            color: #c1272d;
+            font-weight: bolder;
+            /* font-size: 58px; */
+            font-size: 30px;
+        }
+        .dragonjp .djp-res .djp-res-elm:last-child span:first-child {
+            background: #df2424;
+            box-shadow: 0px 4px 0 1px #800b0b;
+            text-shadow: 1px 1px #db2929, -1px -1px #9b1616;
+            color: #fff394;
+        }
+        .txt15 {
+            font-size: 15px;
+        }
+        .dragonjp .djp-res.djp-res-conz .djp-res-elm span:first-child {
+            font-size: 25px;
+        }
+        .a-white {
+            color: #fff !important;
+        }
+        .resultdate {
+            position: relative;
+        }
+        .rdt-left, .rdt-right {
+            position: absolute;
+            width: 1.5%;
+            height: 100%;
+        }
+        .rdt-left {
+            left: 0;
+            top: 0;
+        }
+        .rdt-right {
+            right: 0;
+            top: 0;
+        }
+        .rdt-center.rdt-center--yellow {
+            background-color: #ffde17;
+            color: black !important;
+        }
+        .rdt-center {
+            background-color: black;
+            width: 97%;
+            margin: auto;
+        }
+        .res-tbl-1.res-tbl-1-yellow {
+            border-collapse: unset;
+            box-shadow: unset;
+            border-top-right-radius: 15px;
+            border-top-left-radius: 15px;
+            border-spacing: 1px;
+        }
+
+        .res-tbl-1 {
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            overflow: hidden;
+            box-shadow: 1px 1px 5px #00000052;
+            margin: 0;
+            font-size: 1.2rem;
+        }
+.res-tbl-1.res-tbl-1-yellow th {
+    color: #e7d766;
+    padding: 5px;
+}
+.res-tbl-1 th {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+}
+.res-tbl-1.res-tbl-1-yellow td {
+    border: 0;
+    padding: 6px;
+    box-shadow: 1px 1px 5px #0000001c;
+}
+.res-tbl-1 td:first-child {
+    background-color: #003032;
+    color: white;
+    font-weight: bold;
+}
+.res-tbl-1 td {
+    background-color: white;
+    padding: 4px;
+    border: 1px solid #c8c8c8;
+}
+.res-tbl-1 span.r {
+    color: red;
+}
+.res-tbl-2.res-tbl-2-yellow {
+    border-collapse: unset;
+    box-shadow: unset;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    border-spacing: 1px;
+}
+
+.res-tbl-2 {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    overflow: hidden;
+    box-shadow: 1px 1px 5px #00000052;
+    margin: 0;
+    font-size: 1.1rem;
+}
+.res-tbl-2 tr:first-child {
+    /* border-bottom: 1px solid #c8c8c8; */
+}
+.res-tbl-2.res-tbl-2-yellow th {
+    color: #e7d766;
+    padding: 5px;
+    background-color: black;
+}
+.res-tbl-2 th {
+    background-color: #c1272d;
+    color: white;
+}
+.res-tbl-2.res-tbl-2-yellow td {
+    border: 0;
+    padding: 6px;
+    box-shadow: 1px 1px 5px #0000001c;
+}
+.res-tbl-2 td {
+    padding: 4px;
+    /* border-right: 1px solid #c8c8c8; */
+    border: 1px solid #c8c8c8;
+    background-color: white;
+}
+.res-tbl-2 span.r {
+    font-size: 0.8rem;
+    vertical-align: top;
+    font-weight: bold;
+}
+
+.res-tbl-2 span.r {
+    color: red;
+}
+.jppool-box {
+    position: absolute;
+    color: #ed1c24;
+    font-size: 1.8rem;
+    /* top: 54%; */
+    top: 57%;
+    width: 100%;
+    font-weight: bold;
+}
+.dtstamp.dtstamp--mod2 {
+    font-size: 0.8rem;
+    margin-top: -0.2rem;
+    text-shadow: none;
+}
+.dtstamp {
+    font-size: 0.65rem;
+    color: #b1b1b1;
+    font-style: italic;
+    display: block;
+    line-height: 1;
+    margin-top: 0.2rem;
+    text-align: center;
+}
+.fourd-jp-v2 {
+    text-align: center;
+    height: 100%;
+    background: url('../assets/images/KIMCO ICONS/4d-bg-black.png') center center no-repeat;
+    background-size: 100% 100%;
+    color: white;
+    word-break: break-word;
+    font-size: 1.2rem;
+}
+.m-auto-hori {
+    margin: 0 auto;
+}
+.fourd-jp-v2 .fourd-jp-v2-top .fourd-header {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+}
+.fourd-jp-v2 .fourd-header {
+    color: yellow;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.c-gold {
+    color: #d8bc71 !important;
+}
+hr.white-translucent {
+    border-color: rgba(255, 255, 255, 0.25);
+}
+hr.gold {
+    border-top: 1px solid rgb(236, 178, 29);
+}
+.gold {
+    color: #fbe750 !important;
+}
+.res-tbl-1.res-tbl-1--6d.res-tbl-1--6d-yellow tr {
+    border-bottom: 1px solid #a30000;
+}
+.res-tbl-1.res-tbl-1--6d tr {
+    border-bottom: 1px solid #c8c8c8;
+}
+.res-tbl-1.res-tbl-1--6d.res-tbl-1--6d-yellow th {
+    color: #e7d766;
+    padding: 5px;
+}
+.res-tbl-1.res-tbl-1--6d td:first-child {
+    width: 40%;
+}
+.res-tbl-1.res-tbl-1--6d td {
+    width: 24px;
+    padding: 4px 3px;
+    border: 0;
+}
+.res-tbl-1.res-tbl-1--6d span {
+    color: white;
+}
+.res-tbl-1.res-tbl-1--6d td .sixd-firstpz span {
+    display: inline-block;
+    color: #c1272d !important;
+    padding: 0 5%;
+    font-weight: bold;
+}
+.res-tbl-1.res-tbl-1--6d .void {
+    padding: 0 0.5%;
+}
+.res-tbl-1.res-tbl-1--6d .voidor {
+    color: white;
+    background-color: #666666;
+    width: 30px;
+}
+.res-tbl-1.res-tbl-1--6d .void span {
+    display: block;
+    height: 20px;
+    background-color: #b3b3b3;
+}
+.HL-box {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #000000d6;
+    opacity: 0;
+    transition: .5s ease;
+}
+.HL-box:hover {
+    opacity: 1;
+}
+.HL-box .HL-viewmore {
+    display: inline-block;
+    color: white;
+    border: 1px solid white;
+    padding: 0.3rem 1.5rem;
+}
+.HL-box .HL-viewmore:hover {
+    cursor: pointer;
+}
+.max-text-lines-1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+}
+.bg-verylightgray {
+    background-color: #f1f2f2 !important;
+}
+.fluid-width-video-wrapper {
+    width: 100%;
+    position: relative;
+    padding: 0;
+}
+.fluid-width-video-wrapper {
+    height: 100%;
+}
+.fluid-width-video-wrapper iframe, .fluid-width-video-wrapper object, .fluid-width-video-wrapper embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.sale-flash.sale-flash--mod {
+    font-size: 10px;
+    padding: 1px 6px;
+    top: 12px;
+    left: 12px;
+    background-color: #fb2727;
+}
+.ytselect.active {
+    background-color: lightgray;
+}
+a {
+    color: #bc1020;
+}
+        .font-family-raleway {
+            font-family: 'Raleway' !important;
+        }
+        /*font class*/
+        .datepicker.default {
+            background: no-repeat center;
+            background-color: white;
+            background-position-x: 98%;
+            background-size: 21px;
+        }
+        .large-font {
+            font-size: 1rem;
+        }
+        .content-wrap {
+            padding: 0 0 30px 0 !important;
+
+        }
+        select.select-center {
+            text-align-last: center;
+        }
+        .res-add {
+            /* position: relative; */
+            transition: linear 0.2s;
+        }
+        .res-add:hover {
+            /* box-shadow: inset 0px 0px 7px #0000004a !important; */
+            background-color: #dbdbdb;
+            cursor: pointer;
+        }
+        .tbl-3.tbl-3--mod1 {
+            width: 100%;
+        }
+
+        .tbl-3 {
+            margin-bottom: 15px;
+        }
+        .tbl-3.tbl-3--mod1 tr {
+            background-color: lightgray;
+            transition: linear 0.5s;
+        }
+        .tbl-3.tbl-3--mod1 tr:first-child th {
+            background-color: black;
+            color: #e7d766;
+        }
+        .tbl-3.tbl-3--mod1 th {
+            background-color: gray;
+            color: white;
+        }
+        .tbl-3 tr td:first-child {
+            font-weight: bold;
+        }
+
+        .tbl-3.tbl-3--mod1 td {
+            padding: 0.5rem;
+        }
+        .tbl-3 tr td input {
+            text-align: center;
+        }
+        .w100 {
+            width: 100% !important;
+        }
+
+        .bg-black-gold-stroke {
+            background-color: #000;
+            border: 7px solid #fff760;
+            border-radius: 30px;
+        }
+        .c-sunglow {
+            color: #fbc931 !important;
+        }
+
+        .bonusjp-box {
+            position: absolute;
+            width: 100%;
+            top: 44%;
+            line-height: 1;
+            color: white;
+            font-size: 26px;
+        }
+        
+        .c-yellow {
+            color: #ffe317;
+        }
+        .bonusjp-box .fbig {
+            font-size: 22px;
+            font-weight: unset;
+        }
+        .jpunits-box {
+            position: absolute;
+            color: white;
+            top: 13%;
+            width: 100%;
+            font-size: 21px;
+            font-size: 1.2rem;
+        }
+        .jpunits-box {
+            top: 15%;
+            font-size: 18px;
+        }
+
+        .txt30 {
+            font-size: 30px;
+        }
+        .txt18 {
+            font-size: 18px;
+        }
+        
+        .flag-icon {
+            background-size: contain;
+            background-position: 50%;
+            background-repeat: no-repeat;
+            position: relative;
+            display: inline-block;
+            width: 1.33333333em;
+            line-height: 1em;
+        }
+        .flag-icon-us {
+            background-image: url('../assets/images/KIMCO ICONS/us.png');
+        }
+        .flag-icon-my {
+            background-image: url(../flags/4x3/my.svg);
+        }
+        .flag-icon-th {
+            background-image: url(../flags/4x3/th.svg);
+        }
+        .flag-icon-id {
+            background-image: url(../flags/4x3/id.svg);
+        }
+        .flag-icon-cn {
+            background-image: url(../flags/4x3/cn.svg);
+        }
+
+        .bonus-calculator.bonus-calculator--big {
+            font-size: 1.5rem;
+        }
+
+        .bonus-calculator {
+            box-shadow: 1px 1px 5px #00000038;
+            display: inline-block;
+        }
+
+        .input-1 {
+            border-radius: 30px;
+            padding: 0.3rem 0.5rem;
+            font-size: 0.7rem;
+            border: 1px solid gray;
+            min-width: 150px;
+        }
+        .bonus-calculator.bonus-calculator--big input {
+            font-size: 1.2rem;
+        }
+        .divtblunitprice {
+            padding: 2%;
+            background: url('../assets/images/KIMCO ICONS/unitprice_bg.png') top center no-repeat;
+            background-size: 100% 100%;
+        }
+        .tbl-4 {
+            width: 100%;
+            font-size: 18px;
+            margin-bottom: 0;
+        }
+        .tbl-4 thead tr:nth-child(1) {
+            border-bottom: 2px solid black;
+        }
+        .tbl-4 td:nth-child(1) {
+            border-right: 2px solid black;
+        }
+        .tbl-4 td {
+            padding: 1.2%;
+        }
+        .tbl-4 tbody tr:nth-child(odd) {
+            background-color: #fefefe;
+        }
+        .tbl-4 tbody tr:nth-child(even) {
+            background-color: #e7e7e7;
+        }
+        .qbu-currency {
+            color: #221e1f;
+            position: absolute;
+            top: 16%;
+            left: 40%;
+            font-weight: bold;
+            font-size: 5rem;
+            width: 30%;
+        }
+        .qbu-currency.qbu-currency--sm {
+            top: 22%;
+            font-size: 4rem;
+        }
+        .qbu-currency span {
+            font-size: 3.5rem;
+        }
+        .bonus-calculator.bonus-calculator--big .btn-1 {
+            font-size: 1.2rem;
+        }
+        @media (min-width: 991px) {
+            .xl-hide {
+                display: none;
+            }
+            .qbu-currency {
+                font-size: 5rem;
+            }
+            .qbu-currency.qbu-currency--sm {
+                top: 27%;
+                font-size: 3.5rem;
+            }
+            .qbu-currency span {
+                font-size: 3rem;
+            }
+        }
+        @media (max-width: 991px){
+            .m-hide {
+                display: none;
+            }
+            #content {
+                /* background-image: url(/images/payout_bg.png) !important; */
+                background-image: none !important;
+                background-size: 100%;
+                background-repeat: no-repeat;
+            }
+            .bg-kamekame {
+                background: url('../assets/images/KIMCO ICONS/Kamekame.jpg');
+                background-size: 12%;
+            }
+            .jppool-box {
+                /* font-size: 29px; */
+                font-size: 1.3rem;
+            }
+            .dtstamp.dtstamp--mod2 {
+                font-size: 0.5rem;
+            }
+            .fourd-jp-v2 {
+                font-size: .9rem;
+            }
+            .fourd-jp-v2 .fourd-jp-v2-top .fourd-header {
+                font-size: 1.4rem;
+            }
+            .fourd-jp-v2 .fourd-header {
+                font-size: 1.2rem;
+            }
+            .res-tbl-1.res-tbl-1--6d td:first-child {
+                width: 30%;
+            }
+        }
+        @media (max-width: 767px){
+            .banner-box .banner-box-title span {
+                font-size: 9vw;
+                border-bottom: 1.5px solid white;
+            }
+            .sm-100 {
+                width: 100% !important;
+            }
+            h3 {
+                font-size: 20px;
+            }
+            .main-res {
+                padding-top: 0;
+            }
+            .main-jp-tab {
+                position: unset;
+                width: auto;
+            }
+            .sm-25 {
+                width: 25% !important;
+            }
+            .sm-show {
+                display: initial !important;
+            }
+            .dragonjp {
+                background: url('../assets/images/KIMCO ICONS/jppool-bg-mob.png') center center;
+                background-size: 100% 100%;
+            }
+            .dragonjp .djp-dt {
+                font-size: 1.3rem;
+            }
+            .dragonjp .djp-dt span {
+                font-size: .9rem;
+            }
+            .dragonjp .djp-pool {
+                font-size: 6vw;
+                padding: 2% 0;
+            }
+            .dragonjp .djp-res .djp-res-elm {
+                padding: 1px;
+            }
+            .dragonjp .djp-res .djp-res-elm span:first-child {
+                border-radius: 5px;
+                font-size: 7vw;
+            }
+            .jppool-box {
+                font-size: 5.5vw;
+            }
+            .dtstamp.dtstamp--mod2 {
+                font-size: 2vw;
+            }
+            .res-tbl-1.res-tbl-1--6d td:first-child {
+                width: auto;
+            }
+            
+        }
+        @media (max-width: 575px){
+            .container, #header.full-header .container, .container-fullwidth {
+                width: 100% !important;
+                padding-left: 40px !important;
+                padding-right: 40px !important;
+            }
+        }
+        
+        
+
+    </style>
+    <!--Start Header-->
+    <header id="header" class="full-header">
+                
+                <%--<div id="login-wrap">
+                    <div class="login-wrap-user">
+                        <input placeholder="Phone Number" name="UN" id="txtLoginUsername" class="input-1">
+                        <input placeholder="Password" name="PW" id="txtLoginPass" class="input-1" type="password">
+                        <div id="btnLogin" class="inline-block btn-1 btn-1-red text-center" onclick="GDP_LOGIN()">LOGIN</div>
+                        <a class="btn-1 inline-block text-center" id="btnSignUp" href="/member/signup.aspx">SIGN UP</a>
+
+                        <div class="login-wrap-user-fp">
+                            <a href="/member/forgotpw.aspx">forgot password?</a>
+                        </div>
+                    </div>
+                    <div class="login-wrap-flag">
+                        LOGIN
+                    </div>
+                </div>--%>
+                
+                <div id="header-wrap" class="">
+                    <div class="container clearfix">
+                        <div class="cornered"></div>
+                        <div id="primary-menu-trigger"><%--<i class="icon-reorder"></i>--%><i class="fas fa-bars text-danger"></i></div>
+
+                        <!-- Logo
+					============================================= -->
+                        <div id="logo">
+                            <a href="/" class="standard-logo">
+                                <img src="../assets/images/KIMCO ICONS/logo.png" alt="kimlotto"></a>
+                            <a href="/" class="retina-logo">
+                                <img src="../assets/images/KIMCO ICONS/logo@2x.png" alt="kimlotto"></a>
+                        </div>
+                        <!-- #logo end -->
+
+                        <!-- Primary Navigation
+					============================================= -->
+                        <nav id="primary-menu">
+                            <ul class="sf-js-enabled d-block" style="touch-action: pan-y;">
+                                <li><a href="home.aspx">Home</a></li>
+                                <li class="sub-menu"><a href="#" class="sf-with-ul">Our Games</a>
+                                    <ul class="menu-pos-invert" id="L1" style="display:none;">
+                                        
+                                        <li><a href="4D.aspx">KIM LOTTO 4D</a></li>
+                                        <li><a href="6D.aspx">KIM LOTTO 6D</a></li>
+                                        <li><a href="prize.aspx">Prize Structure</a></li>
+                                        <li><a href="Machine.aspx">Machine Design &amp; Spec</a></li>
+                                        <li><a href="How-to-draw.aspx">How We Draw?</a></li>
+                                    </ul>
+                                </li>
+                                <li class="sub-menu"><a href="#" class="sf-with-ul">About Us</a>
+                                    <ul class="menu-pos-invert" id="L2" style="display:none;">
+                                        <li><a href="about-us.aspx">About Us</a></li>
+                                        <li><a href="long-long.aspx">About LONG LONG</a></li>
+                                        <li><a href="about-corporate-value.aspx">Our Corporate Value</a></li>
+                                        <li><a href="about-play-responsibility.aspx">Play Responsibility</a></li>
+                                        <li><a href="about-protect.aspx">Protect Yourself</a></li>
+                                        <li><a href="about-contact-us.aspx">Contact Us</a></li>
+                                    </ul>
+                                </li>
+                                <li class="sub-menu"><a href="#" class="sf-with-ul">Results</a>
+                                    <ul class="menu-pos-invert" id="L3" style="display: none;">
+                                        <li><a href="resultToday.aspx">Today Result</a></li>
+                                        <li><a href="resultPast.aspx">Past Results</a></li>
+                                        <li><a href="resultJackpotWinner.aspx">6+1D Jackpot Winner</a></li>
+                                        <li><a href="resultDidIWin.aspx">Did I win?</a></li>
+                                        <li><a href="resultPrizeCal.aspx">Prize Calculator</a></li>
+                                        <li><a href="resultStatistics.aspx">Statistics</a></li>
+                                        <li><a href="resultWatchLiveApp.aspx">Watch Live in GDApp</a></li>
+                                        <li><a href="resultWatchLiveFB.aspx">Watch Live in FB</a></li>
+                                        <li><a href="resultWatchLiveWeb.aspx">Watch Live in Web</a></li>
+                                        <li><a href="resultWatchLiveWechat.aspx">Watch Live in WeChat</a></li>
+                                    </ul>
+                                </li>
+                                <li class="sub-menu"><a href="#" class="sf-with-ul">Jackpot</a>
+                                    <ul class="menu-pos-invert" id="L4" style="display: none;">
+                                        <li><a href="dragonJackpot.aspx">Dragon Jackpot 6+1D</a></li>
+                                        <li><a href="jackpot4D.aspx">4D Jackpot Tracker</a></li>
+                                        <li><a href="jackpotHowItWorks.aspx">How It Works?</a></li>
+                                        <li><a href="jackpotCalculator.aspx">Jackpot Calculator</a></li>
+                                        <li><a href="jackpotHowToWin.aspx">How to Win?</a></li>
+                                        <li><a href="jackpotSharingRules.aspx">Sharing Rules</a></li>
+                                    </ul>
+                                </li>
+                                <%--<li class="sub-menu"><a href="#" class="sf-with-ul">The Community</a>
+                                    <ul style="display: none;">
+                                        <li><a href="/community">Connect Us</a></li>
+                                        <li><a href="/community/longlong">Long Long Dream Number</a></li>
+                                        <li><a href="/community/partner">Partner Program</a></li>
+                                        <li><a href="/community/our-videos">Our Videos</a></li>
+                                        <li><a href="http://blog.gdlotto.com/" target="_blank">Blog</a></li>
+                                    </ul>
+                                </li>--%>
+                                
+                                <%--<li class="sub-menu"><a href="#" class="sf-with-ul">GDPOINTS
+                                    </a>
+                                    <ul class="menu-pos-invert" style="display: none;">
+                                        <li><a href="/gdpoints">GDPOINTS.COM</a></li>
+                                        
+                                        <li><a href="/member/login.aspx">Login</a></li>
+                                        <li><a href="/member/signup.aspx">Sign Up</a></li>
+                                        
+                                    </ul>
+                                </li>
+
+                                <li class="sub-menu"><a href="#" class="sf-with-ul">ENG ▼</a>
+                                    
+                                    <ul class="menu-pos-invert" style="display: none;">
+                                        <li onclick="doLangChg('en')"><a href="javascript:void(0)">ENGLISH</a></li>
+                                        <li onclick="doLangChg('cn')"><a href="javascript:void(0)">中文</a></li>
+                                        <li onclick="doLangChg('kh')"><a href="javascript:void(0)">KHMER</a></li>
+                                    </ul>
+                                </li>--%>
+                            </ul>
+
+                        </nav>
+                        <!-- #primary-menu end -->
+
+                    </div>
+
+                </div>
+
+            </header>
+    <!-- END HEADER -->
+    <div class="banner-box">
+        <img src="../assets/images/KIMCO ICONS/20190507 web Cover-03.jpg" class="m-hide">
+        <img src="../assets/images/KIMCO ICONS/20190820 web Cover Mobile-05.jpg" class="xl-hide">
+        <div class="banner-box-title v-mid">
+            <div><span class="inline-block uppercase">Bonus Jackpot</span></div>
+        </div>
+    </div>
+
+    <div class="content-wrap bg-verylightgray">
+    <div class="pt-3">
+        <div class="container clearfix p-3">
+            <h2 class="m-0 text-white bg-golden">QUALIFIED BONUS WINNER</h2>
+
+            <div class="row pt-2">
+                <div class="txt18 col-md-5 mb-2 text-justify">
+                    All Bonus Jackpot is only applicable our 4D BIG, and 4D SMALL product. The minimum bet <b>per</b> 4D number must not less than USD1 (or equal to RM4 / THB30 / IDR14,000), and it's not including the combination of USD1 (or equal to USD1 / RM4 / THB30 / IDR14,000) for both SMALL and BIG 4D. E.g. If any user who purchased 1234 with RM2 SMALL and RM2 BIG. This combination of RM4 is not qualified for one unit of Bonus Jackpot (as per 4D number is only RM2). You will earn 1 unit share of the Bonus for every USD1 bet for each individual 4D number, and earn 2 units of share if your bet exceed USD1.99.
+                </div>
+                <div class="col-md-7">
+                    <!--<img src="/images/WebUIv2-28_en-us.png" />-->
+                    <div class="divtblunitprice">
+                        <table class="tbl-4 text-center">
+                            <thead>
+                                <tr>
+                                    <td><b>COUNTRY</b></td>
+                                    <td colspan="2"><b>QUALIFIED UNIT PRICE</b></td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Cambodia</td>
+                                    <td>USD1 - USD1.99</td>
+                                    <td>1 unit</td>
+                                </tr>
+                                <tr>
+                                    <td>Malaysia</td>
+                                    <td>MYR4 - MYR7.99</td>
+                                    <td>1 unit</td>
+                                </tr>
+                                <tr>
+                                    <td>Thailand</td>
+                                    <td>THB30 - THB59.9</td>
+                                    <td>1 unit</td>
+                                </tr>
+                                <tr>
+                                    <td>Indonesia</td>
+                                    <td>IDR14,000 - IDR27,999</td>
+                                    <td>1 unit</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="content-wrap">
+    <div class="container clearfix p-3">
+        <h2 class="m-0 text-white bg-golden">FORMULA OF A QUALIFIED BONUS UNIT</h2>
+        <div class="tabs clearfix mt-3 ui-tabs ui-corner-all ui-widget ui-widget-content" id="tab-1">
+
+            <ul class="tab-nav clearfix ui-tabs-nav ui-corner-all ui-helper-reset ui-helper-clearfix ui-widget-header" role="tablist">
+                <li role="tab" tabindex="0" class="ui-tabs-tab ui-corner-top ui-state-default ui-tab ui-tabs-active ui-state-active" aria-controls="tabs-usd" aria-labelledby="ui-id-1" aria-selected="true" aria-expanded="true"><a href="#tabs-usd" role="presentation" tabindex="-1" class="ui-tabs-anchor" id="ui-id-1"><span class="flag-icon flag-icon-us"></span>&nbsp;&nbsp;USD</a></li>
+                <li role="tab" tabindex="-1" class="ui-tabs-tab ui-corner-top ui-state-default ui-tab" aria-controls="tabs-myr" aria-labelledby="ui-id-2" aria-selected="false" aria-expanded="false"><a href="#tabs-myr" role="presentation" tabindex="-1" class="ui-tabs-anchor" id="ui-id-2"><span class="flag-icon flag-icon-my"></span>&nbsp;&nbsp;MYR</a></li>
+                <li role="tab" tabindex="-1" class="ui-tabs-tab ui-corner-top ui-state-default ui-tab" aria-controls="tabs-thb" aria-labelledby="ui-id-3" aria-selected="false" aria-expanded="false"><a href="#tabs-thb" role="presentation" tabindex="-1" class="ui-tabs-anchor" id="ui-id-3"><span class="flag-icon flag-icon-th"></span>&nbsp;&nbsp;THB</a></li>
+                <li role="tab" tabindex="-1" class="ui-tabs-tab ui-corner-top ui-state-default ui-tab" aria-controls="tabs-idr" aria-labelledby="ui-id-4" aria-selected="false" aria-expanded="false"><a href="#tabs-idr" role="presentation" tabindex="-1" class="ui-tabs-anchor" id="ui-id-4"><span class="flag-icon flag-icon-id"></span>&nbsp;&nbsp;IDR</a></li>
+                <li role="tab" tabindex="-1" class="ui-tabs-tab ui-corner-top ui-state-default ui-tab" aria-controls="tabs-rmb" aria-labelledby="ui-id-5" aria-selected="false" aria-expanded="false"><a href="#tabs-rmb" role="presentation" tabindex="-1" class="ui-tabs-anchor" id="ui-id-5"><span class="flag-icon flag-icon-cn"></span>&nbsp;&nbsp;RMB</a></li>
+            </ul>
+
+            <div class="tab-container">
+
+                <div class="tab-content clearfix ui-tabs-panel ui-corner-bottom ui-widget-content" id="tabs-usd" aria-labelledby="ui-id-1" role="tabpanel" aria-hidden="false">
+                    <div class="pt-2">
+                        <div class="txt18">How to count a unit of qualified Bonus Unit?</div>
+                        <div class="text-center p-md-3 pt-3 pb-3 position-relative">
+                            <img src="../assets/images/KIMCO ICONS/bjp8_en-us.png" class="w-100">
+                            <div class="qbu-currency">
+                                <span>USD</span> 1.00
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2 class="m-0 c-golden">FOR EXAMPLE:</h2>
+                    <div class="row">
+                        <div class="col-md-5">
+
+                            <div class="row mb-2">
+                                <div class="col-2 pr-0 pr-xl-3">
+                                    <img src="../assets/images/KIMCO ICONS/WebUIv2-29.png" class="w-100">
+                                </div>
+                                <div class="  col-10 txt16 v-mid">
+                                    Betting of USD1 per 4D number.<br>
+                                    $1 / $1 = 1 unit
+                                </div>
+                            </div>
+
+                            <div class="row mb-2">
+                                <div class="col-2 pr-0 pr-xl-3">
+                                    <img src="../assets/images/KIMCO ICONS/WebUIv2-30.png" class="w-100">
+                                </div>
+                                <div class="  col-10 txt16 v-mid">
+                                    Betting of USD2 per 4D number.<br>
+                                    $2 / $1 = 2 units
+                                </div>
+                            </div>
+
+                            <div class="row mb-2">
+                                <div class="col-2 pr-0 pr-xl-3">
+                                    <img src="../assets/images/KIMCO ICONS/WebUIv2-31.png" class="w-100">
+                                </div>
+                                <div class="  col-10 txt16 v-mid">
+                                    Betting of USD3.50 per 4D number.<br>
+                                    $1.50 / $1 = 1 unit (1.5 = 1)
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-5">
+
+                            <div class="row mb-2">
+                                <div class="col-2 pr-0 pr-xl-3">
+                                    <img src="../assets/images/KIMCO ICONS/WebUIv2-32.png" class="w-100">
+                                </div>
+                                <div class="  col-10 txt16 v-mid">
+                                    Betting of USD4.5 per 4D number.<br>
+                                    $4.50 / $1 = 4 units (4.50 = 4)
+                                </div>
+                            </div>
+
+                            <div class="row mb-2">
+                                <div class="col-2 pr-0 pr-xl-3">
+                                    <img src="../assets/images/KIMCO ICONS/WebUIv2-33.png" class="w-100">
+                                </div>
+                                <div class="  col-10 txt16 v-mid">
+                                    Betting of USD7 per 4D number.<br>
+                                    $7 / $1 = 7 units
+                                </div>
+                            </div>
+
+                            <div class="row mb-2">
+                                <div class="col-2 pr-0 pr-xl-3">
+                                    <img src="../assets/images/KIMCO ICONS/WebUIv2-34.png" class="w-100">
+                                </div>
+                                <div class="  col-10 txt16 v-mid">
+                                    Betting of USD7.25 per 4D number.<br>
+                                    $7.25 / $1 = 7 units (7.25 = 7)
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-md-6">
+                        </div>
+                    </div>
+                    <div class="bonus-calculator bonus-calculator--big p-4 bg-verylightgray mt-4 w-100 text-center m-hide position-relative">
+                        <h3 class="mb-2 inline-block ">Qualified Bonus Unit Calculator</h3><br>
+                        $ <input type="number" step="0.01" onchange="calcBonusUnits(this,1)" class="input-1 mb-2" placeholder="Enter Bet Amount">&nbsp;&nbsp;/&nbsp;&nbsp;$1
+                        <div class="btn-1 btn-1-red inline-block ml-2">Calculate</div><hr>
+                        <h1 class="inline-block mb-0 c-themered"><b class="bonusUnits">0</b> units</h1>
+                    <div class="jpi-abs-info on-hover-pointer"><a class="ttip-estjp" href="javascript:;" data-toggle="tooltip" data-placement="bottom" data-html="true" data-trigger="click" data-original-title="Click here to <a href='/jackpot/calculator'>Learn More</a>"> <i class="icon-question-sign"></i></a></div></div>
+
+                    <div class="bonus-calculator p-3 bg-verylightgray mt-2 w-100 text-center xl-hide position-relative">
+                        <h4 class="mb-2 inline-block ">Qualified Bonus Unit Calculator</h4><br>
+                        $ <input type="number" step="0.01" onchange="calcBonusUnits(this,1)" class="input-1 mb-2" placeholder="Enter Bet Amount">&nbsp;&nbsp;/&nbsp;&nbsp;$1
+                        <div class="btn-1 btn-1-red inline-block ml-2">Calculate</div><hr>
+                        <h2 class="inline-block mb-0 c-themered"><b class="bonusUnits">0</b> units</h2>
+                    <div class="jpi-abs-info on-hover-pointer"><a class="ttip-estjp" href="javascript:;" data-toggle="tooltip" data-placement="bottom" data-html="true" data-trigger="click" data-original-title="Click here to <a href='/jackpot/calculator'>Learn More</a>"> <i class="icon-question-sign"></i></a></div></div>
+                </div>
+                
+                <div class="tab-content clearfix ui-tabs-panel ui-corner-bottom ui-widget-content d-none" id="tabs-myr" aria-labelledby="ui-id-2" role="tabpanel" aria-hidden="true">
+                    <div class="pt-2">
+                        <div class="txt18">How to count a unit of qualified Bonus Unit?</div>
+                        <div class="text-center p-md-3 pt-3 pb-3 position-relative">
+                            <img src="../assets/images/KIMCO ICONS/bjp8_en-us.png" class="w-100">
+                            <div class="qbu-currency">
+                                <span>RM</span> 4.00
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2 class="m-0 c-themered">FOR EXAMPLE:</h2>
+                    <div class="row">
+                        <div class="col-md-5">
+
+                            <div class="row mb-2">
+                                <div class="col-2 pr-0 pr-xl-3">
+                                    <img src="../assets/images/KIMCO ICONS/WebUIv2-29.png" class="w-100">
+                                </div>
+                                <div class="  col-10 txt16 v-mid">
+                                    Betting of RM4 per 4D number.<br>
+                                    RM4 / RM4 = 1 unit
+                                </div>
+                            </div>
+
+                            <div class="row mb-2">
+                                <div class="col-2 pr-0 pr-xl-3">
+                                    <img src="../assets/images/KIMCO ICONS/WebUIv2-30.png" class="w-100">
+                                </div>
+                                <div class="  col-10 txt16 v-mid">
+                                    Betting of RM8 per 4D number.<br>
+                                    RM8 / RM4 = 2 units
+                                </div>
+                            </div>
+
+                            <div class="row mb-2">
+                                <div class="col-2 pr-0 pr-xl-3">
+                                    <img src="../assets/images/KIMCO ICONS/WebUIv2-31.png" class="w-100">
+                                </div>
+                                <div class="  col-10 txt16 v-mid">
+                                    Betting of RM7.50 per 4D number.<br>
+                                    RM7.50 / RM4 = 1 unit (1.875 = 1)
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-5">
+
+                            <div class="row mb-2">
+                                <div class="col-2 pr-0 pr-xl-3">
+                                    <img src="../assets/images/KIMCO ICONS/WebUIv2-32.png" class="w-100">
+                                </div>
+                                <div class="  col-10 txt16 v-mid">
+                                    Betting of RM18 per 4D number.<br>
+                                    RM18 / RM4 = 4 units (4.50 = 4)
+                                </div>
+                            </div>
+
+                            <div class="row mb-2">
+                                <div class="col-2 pr-0 pr-xl-3">
+                                    <img src="../assets/images/KIMCO ICONS/WebUIv2-33.png" class="w-100">
+                                </div>
+                                <div class="  col-10 txt16 v-mid">
+                                    Betting of RM28 per 4D number.<br>
+                                    RM28 / RM4 = 7 units
+                                </div>
+                            </div>
+
+                            <div class="row mb-2">
+                                <div class="col-2 pr-0 pr-xl-3">
+                                    <img src="../assets/images/KIMCO ICONS/WebUIv2-34.png" class="w-100">
+                                </div>
+                                <div class="  col-10 txt16 v-mid">
+                                    Betting of RM29 per 4D number.<br>
+                                    RM29 / RM4 = 7 units (7.25 = 7)
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-md-6">
+                        </div>
+                    </div>
+                    <div class="bonus-calculator bonus-calculator--big p-4 bg-verylightgray mt-4 w-100 text-center m-hide position-relative">
+                        <h3 class="mb-2 inline-block ">Qualified Bonus Unit Calculator</h3><br>
+                        RM <input type="number" step="0.01" onchange="calcBonusUnits(this,4)" class="input-1 mb-2" placeholder="Enter Bet Amount">&nbsp;&nbsp;/&nbsp;&nbsp;RM4
+                        <div class="btn-1 btn-1-red inline-block ml-2">Calculate</div><hr>
+                        <h1 class="inline-block mb-0 c-themered"><b class="bonusUnits">0</b> units</h1>
+                    <div class="jpi-abs-info on-hover-pointer"><a class="ttip-estjp" href="javascript:;" data-toggle="tooltip" data-placement="bottom" data-html="true" data-trigger="click" data-original-title="Click here to <a href='/jackpot/calculator'>Learn More</a>"> <i class="icon-question-sign"></i></a></div></div>
+
+                    <div class="bonus-calculator p-3 bg-verylightgray mt-2 w-100 text-center xl-hide position-relative">
+                        <h4 class="mb-2 inline-block ">Qualified Bonus Unit Calculator</h4><br>
+                        RM <input type="number" step="0.01" onchange="calcBonusUnits(this,4)" class="input-1 mb-2" placeholder="Enter Bet Amount">&nbsp;&nbsp;/&nbsp;&nbsp;RM4
+                        <div class="btn-1 btn-1-red inline-block ml-2">Calculate</div><hr>
+                        <h2 class="inline-block mb-0 c-themered"><b class="bonusUnits">0</b> units</h2>
+                    <div class="jpi-abs-info on-hover-pointer"><a class="ttip-estjp" href="javascript:;" data-toggle="tooltip" data-placement="bottom" data-html="true" data-trigger="click" data-original-title="Click here to <a href='/jackpot/calculator'>Learn More</a>"> <i class="icon-question-sign"></i></a></div></div>
+                </div>
+                <div class="tab-content clearfix ui-tabs-panel ui-corner-bottom ui-widget-content d-none" id="tabs-thb" aria-labelledby="ui-id-3" role="tabpanel" aria-hidden="true">
+                    <div class="pt-2">
+                        <div class="txt18">How to count a unit of qualified Bonus Unit?</div>
+                        <div class="text-center p-md-3 pt-3 pb-3 position-relative">
+                            <img src="../assets/images/KIMCO ICONS/bjp8_en-us.png" class="w-100">
+                            <div class="qbu-currency">
+                                30 <span>BAHT</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2 class="m-0 c-themered">FOR EXAMPLE:</h2>
+                    <div class="row">
+                        <div class="col-md-5">
+
+                            <div class="row mb-2">
+                                <div class="col-2 pr-0 pr-xl-3">
+                                    <img src="../assets/images/KIMCO ICONS/WebUIv2-29.png" class="w-100">
+                                </div>
+                                <div class="  col-10 txt16 v-mid">
+                                    Betting of ฿30 per 4D number.<br>
+                                    ฿30 / ฿30 = 1 unit
+                                </div>
+                            </div>
+
+                            <div class="row mb-2">
+                                <div class="col-2 pr-0 pr-xl-3">
+                                    <img src="../assets/images/KIMCO ICONS/WebUIv2-30.png" class="w-100">
+                                </div>
+                                <div class="  col-10 txt16 v-mid">
+                                    Betting of ฿60 per 4D number.<br>
+                                    ฿60 / ฿30 = 2 units
+                                </div>
+                            </div>
+
+                            <div class="row mb-2">
+                                <div class="col-2 pr-0 pr-xl-3">
+                                    <img src="../assets/images/KIMCO ICONS/WebUIv2-31.png" class="w-100">
+                                </div>
+                                <div class="  col-10 txt16 v-mid">
+                                    Betting of ฿56.25 per 4D number.<br>
+                                    ฿56.25 / ฿30 = 1 unit (1.875 = 1)
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-5">
+
+                            <div class="row mb-2">
+                                <div class="col-2 pr-0 pr-xl-3">
+                                    <img src="../assets/images/KIMCO ICONS/WebUIv2-32.png" class="w-100">
+                                </div>
+                                <div class="  col-10 txt16 v-mid">
+                                    Betting of ฿120 per 4D number.<br>
+                                    ฿120 / ฿30 = 4 units (4.50 = 4)
+                                </div>
+                            </div>
+
+                            <div class="row mb-2">
+                                <div class="col-2 pr-0 pr-xl-3">
+                                    <img src="../assets/images/KIMCO ICONS/WebUIv2-33.png" class="w-100">
+                                </div>
+                                <div class="  col-10 txt16 v-mid">
+                                    Betting of ฿210 per 4D number.<br>
+                                    ฿210 / ฿30 = 7 units
+                                </div>
+                            </div>
+
+                            <div class="row mb-2">
+                                <div class="col-2 pr-0 pr-xl-3">
+                                    <img src="../assets/images/KIMCO ICONS/WebUIv2-34.png" class="w-100">
+                                </div>
+                                <div class="  col-10 txt16 v-mid">
+                                    Betting of ฿217.50 per 4D number.<br>
+                                    ฿217.50 / ฿30 = 7 units (7.25 = 7)
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-md-6">
+                        </div>
+                    </div>
+                    <div class="bonus-calculator bonus-calculator--big p-4 bg-verylightgray mt-4 w-100 text-center m-hide position-relative">
+                        <h3 class="mb-2 inline-block ">Qualified Bonus Unit Calculator</h3><br>
+                        ฿ <input type="number" step="0.01" onchange="calcBonusUnits(this,30)" class="input-1 mb-2" placeholder="Enter Bet Amount">&nbsp;&nbsp;/&nbsp;&nbsp;฿30
+                        <div class="btn-1 btn-1-red inline-block ml-2">Calculate</div><hr>
+                        <h1 class="inline-block mb-0 c-themered"><b class="bonusUnits">0</b> units</h1>
+                    <div class="jpi-abs-info on-hover-pointer"><a class="ttip-estjp" href="javascript:;" data-toggle="tooltip" data-placement="bottom" data-html="true" data-trigger="click" data-original-title="Click here to <a href='/jackpot/calculator'>Learn More</a>"> <i class="icon-question-sign"></i></a></div></div>
+
+                    <div class="bonus-calculator p-3 bg-verylightgray mt-2 w-100 text-center xl-hide position-relative">
+                        <h4 class="mb-2 inline-block ">Qualified Bonus Unit Calculator</h4><br>
+                        ฿ <input type="number" step="0.01" onchange="calcBonusUnits(this,30)" class="input-1 mb-2" placeholder="Enter Bet Amount">&nbsp;&nbsp;/&nbsp;&nbsp;฿30
+                        <div class="btn-1 btn-1-red inline-block ml-2">Calculate</div><hr>
+                        <h2 class="inline-block mb-0 c-themered"><b class="bonusUnits">0</b> units</h2>
+                    <div class="jpi-abs-info on-hover-pointer"><a class="ttip-estjp" href="javascript:;" data-toggle="tooltip" data-placement="bottom" data-html="true" data-trigger="click" data-original-title="Click here to <a href='/jackpot/calculator'>Learn More</a>"> <i class="icon-question-sign"></i></a></div></div>
+                </div>
+                <div class="tab-content clearfix ui-tabs-panel ui-corner-bottom ui-widget-content d-none" id="tabs-idr" aria-labelledby="ui-id-4" role="tabpanel" aria-hidden="true">
+                    <div class="pt-2">
+                        <div class="txt18">How to count a unit of qualified Bonus Unit?</div>
+                        <div class="text-center p-md-3 pt-3 pb-3 position-relative">
+                            <img src="../assets/images/KIMCO ICONS/bjp8_en-us.png" class="w-100">
+                            <div class="qbu-currency qbu-currency--sm">
+                                <span>IDR</span> 14,000
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2 class="m-0 c-themered">FOR EXAMPLE:</h2>
+                    <div class="row">
+                        <div class="col-md-5">
+
+                            <div class="row mb-2">
+                                <div class="col-2 pr-0 pr-xl-3">
+                                    <img src="../assets/images/KIMCO ICONS/WebUIv2-29.png" class="w-100">
+                                </div>
+                                <div class="  col-10 txt16 v-mid">
+                                    Betting of IDR14,000 per 4D number.<br>
+                                    IDR14,000 / IDR14,000 = 1 unit
+                                </div>
+                            </div>
+
+                            <div class="row mb-2">
+                                <div class="col-2 pr-0 pr-xl-3">
+                                    <img src="../assets/images/KIMCO ICONS/WebUIv2-30.png" class="w-100">
+                                </div>
+                                <div class="  col-10 txt16 v-mid">
+                                    Betting of IDR24,000 per 4D number.<br>
+                                    IDR28,000 / IDR14,000 = 2 units
+                                </div>
+                            </div>
+
+                            <div class="row mb-2">
+                                <div class="col-2 pr-0 pr-xl-3">
+                                    <img src="../assets/images/KIMCO ICONS/WebUIv2-31.png" class="w-100">
+                                </div>
+                                <div class="  col-10 txt16 v-mid">
+                                    Betting of IDR18,000 per 4D number.<br>
+                                    IDR21,000 / IDR14,000 = 1 unit (1.5 = 1)
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-5">
+
+                            <div class="row mb-2">
+                                <div class="col-2 pr-0 pr-xl-3">
+                                    <img src="../assets/images/KIMCO ICONS/WebUIv2-32.png" class="w-100">
+                                </div>
+                                <div class="  col-10 txt16 v-mid">
+                                    Betting of IDR54,000 per 4D number.<br>
+                                    IDR63,000 / IDR14,000 = 4 units (4.50 = 4)
+                                </div>
+                            </div>
+
+                            <div class="row mb-2">
+                                <div class="col-2 pr-0 pr-xl-3">
+                                    <img src="../assets/images/KIMCO ICONS/WebUIv2-33.png" class="w-100">
+                                </div>
+                                <div class="  col-10 txt16 v-mid">
+                                    Betting of IDR84,000 per 4D number.<br>
+                                    IDR98,000 / IDR14,000 = 7 units
+                                </div>
+                            </div>
+
+                            <div class="row mb-2">
+                                <div class="col-2 pr-0 pr-xl-3">
+                                    <img src="../assets/images/KIMCO ICONS/WebUIv2-34.png" class="w-100">
+                                </div>
+                                <div class="  col-10 txt16 v-mid">
+                                    Betting of IDR90,000 per 4D number.<br>
+                                    IDR101,500 / IDR14,000 = 7 units (7.25 = 7)
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-md-6">
+                        </div>
+                    </div>
+                    <div class="bonus-calculator bonus-calculator--big p-4 bg-verylightgray mt-4 w-100 text-center m-hide position-relative">
+                        <h3 class="mb-2 inline-block ">Qualified Bonus Unit Calculator</h3><br>
+                        IDR <input type="number" step="0.01" onchange="calcBonusUnits(this,14000)" class="input-1 mb-2" placeholder="Enter Bet Amount">&nbsp;&nbsp;/&nbsp;&nbsp;IDR14,000
+                        <div class="btn-1 btn-1-red inline-block ml-2">Calculate</div><hr>
+                        <h1 class="inline-block mb-0 c-themered"><b class="bonusUnits">0</b> units</h1>
+                    <div class="jpi-abs-info on-hover-pointer"><a class="ttip-estjp" href="javascript:;" data-toggle="tooltip" data-placement="bottom" data-html="true" data-trigger="click" data-original-title="Click here to <a href='/jackpot/calculator'>Learn More</a>"> <i class="icon-question-sign"></i></a></div></div>
+
+                    <div class="bonus-calculator p-3 bg-verylightgray mt-2 w-100 text-center xl-hide position-relative">
+                        <h4 class="mb-2 inline-block ">Qualified Bonus Unit Calculator</h4><br>
+                        IDR <input type="number" step="0.01" onchange="calcBonusUnits(this,14000)" class="input-1 mb-2" placeholder="Enter Bet Amount">&nbsp;&nbsp;/&nbsp;&nbsp;IDR14,000
+                        <div class="btn-1 btn-1-red inline-block ml-2">Calculate</div><hr>
+                        <h2 class="inline-block mb-0 c-themered"><b class="bonusUnits">0</b> units</h2>
+                    <div class="jpi-abs-info on-hover-pointer"><a class="ttip-estjp" href="javascript:;" data-toggle="tooltip" data-placement="bottom" data-html="true" data-trigger="click" data-original-title="Click here to <a href='/jackpot/calculator'>Learn More</a>"> <i class="icon-question-sign"></i></a></div></div>
+                </div>
+                
+                <div class="tab-content clearfix ui-tabs-panel ui-corner-bottom ui-widget-content d-none" id="tabs-rmb" aria-labelledby="ui-id-5" role="tabpanel" aria-hidden="true">
+                    <div class="pt-2">
+                        <div class="txt18">How to count a unit of qualified Bonus Unit?</div>
+                        <div class="text-center p-md-3 pt-3 pb-3 position-relative">
+                            <img src="../assets/images/KIMCO ICONS/bjp8_en-us.png" class="w-100">
+                            <div class="qbu-currency">
+                                <span>RMB</span>7.00
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2 class="m-0 c-golden">FOR EXAMPLE:</h2>
+                    <div class="row">
+                        <div class="col-md-5">
+
+                            <div class="row mb-2">
+                                <div class="col-2 pr-0 pr-xl-3">
+                                    <img src="../assets/images/KIMCO ICONS/WebUIv2-29.png" class="w-100">
+                                </div>
+                                <div class="  col-10 txt16 v-mid">
+                                    Betting of ¥7 per 4D number.<br>
+                                    ¥7 / ¥7 = 1 unit
+                                </div>
+                            </div>
+
+                            <div class="row mb-2">
+                                <div class="col-2 pr-0 pr-xl-3">
+                                    <img src="../assets/images/KIMCO ICONS/WebUIv2-30.png" class="w-100">
+                                </div>
+                                <div class="  col-10 txt16 v-mid">
+                                    Betting of ¥14 per 4D number.<br>
+                                    ¥14 / ¥7 = 2 units
+                                </div>
+                            </div>
+
+                            <div class="row mb-2">
+                                <div class="col-2 pr-0 pr-xl-3">
+                                    <img src="../assets/images/KIMCO ICONS/WebUIv2-31.png" class="w-100">
+                                </div>
+                                <div class="  col-10 txt16 v-mid">
+                                    Betting of ¥10.50 per 4D number.<br>
+                                    ¥10.50 / ¥7 = 1 unit (1.5 = 1)
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-5">
+
+                            <div class="row mb-2">
+                                <div class="col-2 pr-0 pr-xl-3">
+                                    <img src="../assets/images/KIMCO ICONS/WebUIv2-32.png" class="w-100">
+                                </div>
+                                <div class="  col-10 txt16 v-mid">
+                                    Betting of ¥31.5 per 4D number.<br>
+                                    ¥31.5 / ¥7 = 4 units (4.50 = 4)
+                                </div>
+                            </div>
+
+                            <div class="row mb-2">
+                                <div class="col-2 pr-0 pr-xl-3">
+                                    <img src="../assets/images/KIMCO ICONS/WebUIv2-33.png" class="w-100">
+                                </div>
+                                <div class="  col-10 txt16 v-mid">
+                                    Betting of ¥49 per 4D number.<br>
+                                    ¥49 / ¥7 = 7 units
+                                </div>
+                            </div>
+
+                            <div class="row mb-2">
+                                <div class="col-2 pr-0 pr-xl-3">
+                                    <img src="../assets/images/KIMCO ICONS/WebUIv2-34.png" class="w-100">
+                                </div>
+                                <div class="  col-10 txt16 v-mid">
+                                    Betting of ¥50.75 per 4D number.<br>
+                                    ¥50.75 / ¥7 = 7 units (7.25 = 7)
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-md-6">
+                        </div>
+                    </div>
+                    <div class="bonus-calculator bonus-calculator--big p-4 bg-verylightgray mt-4 w-100 text-center m-hide position-relative">
+                        <h3 class="mb-2 inline-block ">Qualified Bonus Unit Calculator</h3><br>
+                        ¥ <input type="number" step="0.01" onchange="calcBonusUnits(this,7)" class="input-1 mb-2" placeholder="Enter Bet Amount">&nbsp;&nbsp;/&nbsp;&nbsp;¥7
+                        <div class="btn-1 btn-1-red inline-block ml-2">Calculate</div><hr>
+                        <h1 class="inline-block mb-0 c-themered"><b class="bonusUnits">0</b> units</h1>
+                    <div class="jpi-abs-info on-hover-pointer"><a class="ttip-estjp" href="javascript:;" data-toggle="tooltip" data-placement="bottom" data-html="true" data-trigger="click" data-original-title="Click here to <a href='/jackpot/calculator'>Learn More</a>"> <i class="icon-question-sign"></i></a></div></div>
+
+                    <div class="bonus-calculator p-3 bg-verylightgray mt-2 w-100 text-center xl-hide position-relative">
+                        <h4 class="mb-2 inline-block ">Qualified Bonus Unit Calculator</h4><br>
+                        ¥ <input type="number" step="0.01" onchange="calcBonusUnits(this,7)" class="input-1 mb-2" placeholder="Enter Bet Amount">&nbsp;&nbsp;/&nbsp;&nbsp;¥7
+                        <div class="btn-1 btn-1-red inline-block ml-2">Calculate</div><hr>
+                        <h2 class="inline-block mb-0 c-themered"><b class="bonusUnits">0</b> units</h2>
+                    <div class="jpi-abs-info on-hover-pointer"><a class="ttip-estjp" href="javascript:;" data-toggle="tooltip" data-placement="bottom" data-html="true" data-trigger="click" data-original-title="Click here to <a href='/jackpot/calculator'>Learn More</a>"> <i class="icon-question-sign"></i></a></div></div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+    <div class="content-wrap bg-verylightgray">
+    <div class="container clearfix p-3">
+        <h2 class="m-0 bg-golden text-white">BONUS JACKPOT SYSTEM</h2>
+        <div class="pt-3">
+            <img src="../assets/images/KIMCO ICONS/bjp9_en-us.png" class="w-100">
+        </div>
+    </div>
+</div>
+
+    <!--Script-->
+    <script>
+        let tab1 = document.querySelectorAll(".ui-tabs-tab")[0];
+        let tab2 = document.querySelectorAll(".ui-tabs-tab")[1];
+        let tab3 = document.querySelectorAll(".ui-tabs-tab")[2];
+        let tab4 = document.querySelectorAll(".ui-tabs-tab")[3];
+        let tab5 = document.querySelectorAll(".ui-tabs-tab")[4];
+
+        let div1 = document.querySelectorAll(".tab-content")[0];
+        let div2 = document.querySelectorAll(".tab-content")[1];
+        let div3 = document.querySelectorAll(".tab-content")[2];
+        let div4 = document.querySelectorAll(".tab-content")[3];
+        let div5 = document.querySelectorAll(".tab-content")[4];
+
+        tab1.addEventListener("click", function () {
+            tab2.classList.remove("ui-tabs-active");
+            tab3.classList.remove("ui-tabs-active");
+            tab4.classList.remove("ui-tabs-active");
+            tab5.classList.remove("ui-tabs-active");
+
+            div2.classList.add("d-none");
+            div3.classList.add("d-none");
+            div4.classList.add("d-none");
+            div5.classList.add("d-none");
+
+            tab1.classList.add("ui-tabs-active");
+            div1.classList.remove("d-none");
+
+        })
+        tab2.addEventListener("click", function () {
+            tab1.classList.remove("ui-tabs-active");
+            tab3.classList.remove("ui-tabs-active");
+            tab4.classList.remove("ui-tabs-active");
+            tab5.classList.remove("ui-tabs-active");
+
+            div1.classList.add("d-none");
+            div3.classList.add("d-none");
+            div4.classList.add("d-none");
+            div5.classList.add("d-none");
+
+            tab2.classList.add("ui-tabs-active");
+            div2.classList.remove("d-none");
+
+        })
+        tab3.addEventListener("click", function () {
+            tab1.classList.remove("ui-tabs-active");
+            tab2.classList.remove("ui-tabs-active");
+            tab4.classList.remove("ui-tabs-active");
+            tab5.classList.remove("ui-tabs-active");
+
+            div1.classList.add("d-none");
+            div2.classList.add("d-none");
+            div4.classList.add("d-none");
+            div5.classList.add("d-none");
+
+            tab3.classList.add("ui-tabs-active");
+            div3.classList.remove("d-none");
+
+        })
+        tab4.addEventListener("click", function () {
+            tab1.classList.remove("ui-tabs-active");
+            tab2.classList.remove("ui-tabs-active");
+            tab3.classList.remove("ui-tabs-active");
+            tab5.classList.remove("ui-tabs-active");
+
+            div1.classList.add("d-none");
+            div2.classList.add("d-none");
+            div3.classList.add("d-none");
+            div5.classList.add("d-none");
+
+            tab4.classList.add("ui-tabs-active");
+            div4.classList.remove("d-none");
+
+        })
+        tab5.addEventListener("click", function () {
+            tab1.classList.remove("ui-tabs-active");
+            tab2.classList.remove("ui-tabs-active");
+            tab3.classList.remove("ui-tabs-active");
+            tab4.classList.remove("ui-tabs-active");
+
+            div1.classList.add("d-none");
+            div2.classList.add("d-none");
+            div3.classList.add("d-none");
+            div4.classList.add("d-none");
+
+            tab5.classList.add("ui-tabs-active");
+            div5.classList.remove("d-none");
+
+        })
+    </script>
+    
+</asp:Content>
+

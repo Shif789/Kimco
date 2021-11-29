@@ -1,9 +1,6 @@
-﻿<%@ Page Title="" Language="VB" MasterPageFile="~/CMBusnLocation/busnsite.master" AutoEventWireup="false" CodeFile="resultToday.aspx.vb" Inherits="CMBusnLocation_4D" %>
+﻿<%@ Page Title="" Language="VB" MasterPageFile="~/CMBusnLocation/busnsite.master" AutoEventWireup="false" CodeFile="jackpotCalculator.aspx.vb" Inherits="CMBusnLocation_jackpotCalculator" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
-    <link href="../Css/Header4.css" rel="stylesheet">
-    <link href="../Css/Header3.css" rel="stylesheet">
-    <link href="../Css/shine.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="BodyContent" Runat="Server">
     <style>
@@ -40,6 +37,25 @@
         .round-solid-border{
             border:1px solid #d3d3d3;
             border-radius:20px;
+        }
+        .tbl-2 tr:nth-child(odd) {
+            background-color: #e6e6e6;
+        }
+        .tbl-2 tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .tbl-2 th {
+            background-color: #003032;
+            color: white;
+            font-weight: bold;
+            width: calc(100%/6);
+            padding: 5px 10px;
+            font-size: 13px;
+            text-transform: uppercase;
+        }
+        .tbl-2 td {
+            padding: 5px 10px;
+            font-size: 13px;
         }
         .tbl-5{
             width:100%;
@@ -481,7 +497,7 @@
             position: absolute;
             /* width: calc(100%/4); */
             height: 100%;
-            background: #c1272d;
+            background: #003032;
             top: 0;
             left: 0;
             border-radius: 5rem;
@@ -760,21 +776,21 @@
             margin: auto;
         }
         .res-tbl-1.res-tbl-1-yellow {
-    border-collapse: unset;
-    box-shadow: unset;
-    border-top-right-radius: 15px;
-    border-top-left-radius: 15px;
-    border-spacing: 1px;
-}
+            border-collapse: unset;
+            box-shadow: unset;
+            border-top-right-radius: 15px;
+            border-top-left-radius: 15px;
+            border-spacing: 1px;
+        }
 
-.res-tbl-1 {
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    overflow: hidden;
-    box-shadow: 1px 1px 5px #00000052;
-    margin: 0;
-    font-size: 1.2rem;
-}
+        .res-tbl-1 {
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            overflow: hidden;
+            box-shadow: 1px 1px 5px #00000052;
+            margin: 0;
+            font-size: 1.2rem;
+        }
 .res-tbl-1.res-tbl-1-yellow th {
     color: #e7d766;
     padding: 5px;
@@ -1006,6 +1022,157 @@ hr.gold {
 a {
     color: #bc1020;
 }
+        .font-family-raleway {
+            font-family: 'Raleway' !important;
+        }
+        /*font class*/
+        .datepicker.default {
+            background: no-repeat center;
+            background-color: white;
+            background-position-x: 98%;
+            background-size: 21px;
+        }
+        .large-font {
+            font-size: 1rem;
+        }
+        .content-wrap {
+            padding: 0 0 30px 0 !important;
+
+        }
+        select.select-center {
+            text-align-last: center;
+        }
+        .res-add {
+            /* position: relative; */
+            transition: linear 0.2s;
+        }
+        .res-add:hover {
+            /* box-shadow: inset 0px 0px 7px #0000004a !important; */
+            background-color: #dbdbdb;
+            cursor: pointer;
+        }
+        .tbl-3.tbl-3--mod1 {
+            width: 100%;
+        }
+
+        .tbl-3 {
+            margin-bottom: 15px;
+        }
+        .tbl-3.tbl-3--mod1 tr {
+            background-color: lightgray;
+            transition: linear 0.5s;
+        }
+        .tbl-3.tbl-3--mod1 tr:first-child th {
+            background-color: black;
+            color: #e7d766;
+        }
+        .tbl-3.tbl-3--mod1 th {
+            background-color: gray;
+            color: white;
+        }
+        .tbl-3 tr td:first-child {
+            font-weight: bold;
+        }
+
+        .tbl-3.tbl-3--mod1 td {
+            padding: 0.5rem;
+        }
+        .tbl-3 tr td input {
+            text-align: center;
+        }
+        .w100 {
+            width: 100% !important;
+        }
+
+        .bg-black-gold-stroke {
+            background-color: #000;
+            border: 7px solid #fff760;
+            border-radius: 30px;
+        }
+        .c-sunglow {
+            color: #fbc931 !important;
+        }
+
+        .bonusjp-box {
+            position: absolute;
+            width: 100%;
+            top: 44%;
+            line-height: 1;
+            color: white;
+            font-size: 26px;
+        }
+        
+        .c-yellow {
+            color: #ffe317;
+        }
+        .bonusjp-box .fbig {
+            font-size: 22px;
+            font-weight: unset;
+        }
+        .jpunits-box {
+            position: absolute;
+            color: white;
+            top: 13%;
+            width: 100%;
+            font-size: 21px;
+            font-size: 1.2rem;
+        }
+        .jpunits-box {
+            top: 15%;
+            font-size: 18px;
+        }
+
+        .txt30 {
+            font-size: 30px;
+        }
+        .txt18 {
+            font-size: 18px;
+        }
+        
+        .flag-icon {
+            background-size: contain;
+            background-position: 50%;
+            background-repeat: no-repeat;
+            position: relative;
+            display: inline-block;
+            width: 1.33333333em;
+            line-height: 1em;
+        }
+        .flag-icon-us {
+            background-image: url('../assets/images/KIMCO ICONS/us.png');
+        }
+        .flag-icon-my {
+            background-image: url(../flags/4x3/my.svg);
+        }
+        .flag-icon-th {
+            background-image: url(../flags/4x3/th.svg);
+        }
+        .flag-icon-id {
+            background-image: url(../flags/4x3/id.svg);
+        }
+        .flag-icon-cn {
+            background-image: url(../flags/4x3/cn.svg);
+        }
+
+        .bonus-calculator.bonus-calculator--big {
+            font-size: 1.5rem;
+        }
+
+        .bonus-calculator {
+            box-shadow: 1px 1px 5px #00000038;
+            display: inline-block;
+        }
+
+        .input-1 {
+            border-radius: 30px;
+            padding: 0.3rem 0.5rem;
+            font-size: 0.7rem;
+            border: 1px solid gray;
+            min-width: 150px;
+        }
+        .bonus-calculator.bonus-calculator--big input {
+            font-size: 1.2rem;
+        }
         @media (min-width: 991px) {
             .xl-hide {
                 display: none;
@@ -1108,10 +1275,8 @@ a {
                 padding-right: 40px !important;
             }
         }
-        /*font class*/
-        .font-family-raleway {
-            font-family: 'Raleway' !important;
-        }
+        
+        
 
     </style>
     <!--Start Header-->
@@ -1237,494 +1402,212 @@ a {
 
             </header>
     <!-- END HEADER -->
-    <%--<div class="banner-box">
-        <img src="../assets/images/KIMCO ICONS/home-cover_en-us.jpg" class="m-hide img-fluid" />
-        <img src="../assets/images/KIMCO ICONS/home-cover-mob_en-us.jpg" class="xl-hide img-fluid" />
-        <%--<div class="banner-box-title v-mid">
-        <div>
-            <span <%--style="color:white; font-size:50px; font-weight:bold; border-bottom:2px solid white; text-shadow:3px 3px 5px #000000" class="d-inline-block text-uppercase mb-2">Contact Us</span>
-        </div>
-        </div>
-    </div>--%>
-   <section id="content" style="margin-bottom: 0px;">
-
-        
-        <div class="content-wrap bg-kamekame" id="result-section" style="padding:0 0 30px 0">
-            <div class="container clearfix" style="padding-left: 15px !important; padding-right: 15px !important;">
-                <h2 class="text-white text-center font-family-raleway pt-5 pb-3">TODAY RESULT</h2>
-                <div class="pt-3">
-
-                    
-
-                    <div id="ajax_res4d" class="skeleton-1">
-<div class="row mb-3">
-    <div class="col-12">
-        <div class="dragonjp">
-            <div class="row p-4">
-                <div class="col-md-4 v-mid">
-                    <div class="v-mid p-2 p-md-3 mb-2 mb-md-0">
-                        <img class="w-100" src="../assets/images/KIMCO ICONS/dragonjp_red.png">
-                        <div class="djp-dt">
-                            15 AUG 2021, SUNDAY<br>
-                            <span>next draw : 22 AUG 2021, SUN</span>
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-8 pl-md-0 pr-md-4 v-mid">
-                    <div class="djp-pool icon shine-3">
-                        <span class="7d_JPool">USD70,000.00</span>
-                    </div>
-                    <div class="row text-center">
-                        <div class="col-md-4 pr-md-0 v-mid">
-                            <h4 class="bg-themered bg-themered-plate text-white p-2">
-                                GRAND PRIZE
-                            </h4>
-                        </div>
-                        <div class="col-md-8 pl-md-1 mt-1 mt-md-0">
-                            <div class="djp-res">
-                                <div class="djp-res-elm"><span class="L7_0">5</span></div>
-                                <div class="djp-res-elm"><span class="L7_1">8</span></div>
-                                <div class="djp-res-elm"><span class="L7_2">6</span></div>
-                                <div class="djp-res-elm"><span class="L7_3">0</span></div>
-                                <div class="djp-res-elm"><span class="L7_4">7</span></div>
-                                <div class="djp-res-elm"><span class="L7_5">7</span></div>
-                                <div class="djp-res-elm"><span class="L7_6">3</span></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row text-center mt-md-1 mt-2">
-                        <div class="col-md-4 pr-md-0 v-mid">
-                            <h4 class="bg-themered bg-gray-plate text-white p-2 txt15">
-                                CONSOLATION PRIZE
-                            </h4>
-                        </div>
-                        <div class="col-md-8 pl-md-1 mt-1 mt-md-0">
-                            <div class="djp-res djp-res-conz">
-                                <div class="djp-res-elm"><span>-</span></div>
-                                <div class="djp-res-elm"><span class="L7_1">8</span></div>
-                                <div class="djp-res-elm"><span class="L7_2">6</span></div>
-                                <div class="djp-res-elm"><span class="L7_3">0</span></div>
-                                <div class="djp-res-elm"><span class="L7_4">7</span></div>
-                                <div class="djp-res-elm"><span class="L7_5">7</span></div>
-                                <div class="djp-res-elm"><span class="L7_6">3</span></div>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="text-white text-justify text-md-right txt12 p-1 pr-2">
-                        * Click <a class="a-white" href="#"><b>HERE</b></a> to checkout our Consolation Prize Winner's listing
-                    </div>
-                    
-                </div>
-            </div>
+    <div class="banner-box">
+        <img src="../assets/images/KIMCO ICONS/20190507 web Cover-03.jpg" class="m-hide">
+        <img src="../assets/images/KIMCO ICONS/20190820 web Cover Mobile-05.jpg" class="xl-hide">
+        <div class="banner-box-title v-mid">
+            <div><span class="inline-block uppercase">Bonus Jackpot</span></div>
         </div>
     </div>
-</div>
 
-<div class="resultdate ajresultdate">
-    
-    <img src="../assets/images/KIMCO ICONS/datebgleft-yellow.png" class="rdt-left">
-    <img src="../assets/images/KIMCO ICONS/datebgright-yellow.png" class="rdt-right">
-    <div class="rdt-center text-white text-center p-2 font-weight-bold uppercase rdt-center--yellow">Date : 18/08/2021, Wednesday</div>
-</div>
-
-<div id="result">
-    <div class="row">
-        <div class="col-md-7 col-xl-7 v-bottom">
-            <div class="text-center mt-3">
-                <table class="res-tbl-1 w-100 res-tbl-1-yellow">
-                    <thead>
-                        <tr>
-                            <th colspan="2">4D</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1st Prize</td>
-                            <td><span class="r">(<span id="1stAlph">K</span>)
-                            </span>
-                                <span id="1stPz">5799</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>2nd Prize</td>
-                            <td><span class="r">(<span id="2ndAlph">H</span>)
-                            </span>
-                                <span id="2ndPz">8463</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>3rd Prize</td>
-                            <td><span class="r">(<span id="3rdAlph">D</span>)
-                            </span>
-                                <span id="3rdPz">3705</span>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="text-center mt-3">
-                <table class="res-tbl-2 w-100 res-tbl-2-yellow">
-                    <thead>
-                        <tr>
-                            <th colspan="3">Special Prize</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><span class="r">A</span>
-                                <span id="PzA">6542</span>
-                            </td>
-                            <td><span class="r">B</span>
-                                <span id="PzB">9822</span>
-                            </td>
-                            <td><span class="r">C</span>
-                                <span id="PzC">0176</span>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td><span class="r">D</span>
-                                <span id="PzD">----</span>
-                            </td>
-                            <td><span class="r">E</span>
-                                <span id="PzE">5356</span>
-                            </td>
-                            <td><span class="r">F</span>
-                                <span id="PzF">5064</span>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td><span class="r">G</span>
-                                <span id="PzG">0565</span>
-                            </td>
-                            <td><span class="r">H</span>
-                                <span id="PzH">----</span>
-                            </td>
-                            <td><span class="r">I</span>
-                                <span id="PzI">0465</span>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td><span class="r">J</span>
-                                <span id="PzJ">0914</span>
-                            </td>
-                            <td><span class="r">K</span>
-                                <span id="PzK">----</span>
-                            </td>
-                            <td><span class="r">L</span>
-                                <span id="PzL">7524</span>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td colspan="3"><span class="r">M</span>
-                                <span id="PzM">0096</span>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="text-center mt-3">
-                <table class="res-tbl-2 w-100 res-tbl-2-yellow">
-                    <thead>
-                        <tr>
-                            <th colspan="3">Consolation Prize</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><span class="r">N</span>
-                                <span id="PzN">9629</span>
-                            </td>
-                            <td><span class="r">O</span>
-                                <span id="PzO">0644</span>
-                            </td>
-                            <td><span class="r">P</span>
-                                <span id="PzP">1644</span>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td><span class="r">Q</span>
-                                <span id="PzQ">4371</span>
-                            </td>
-                            <td><span class="r">R</span>
-                                <span id="PzR">7935</span>
-                            </td>
-                            <td><span class="r">S</span>
-                                <span id="PzS">1373</span>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td><span class="r">T</span>
-                                <span id="PzT">4022</span>
-                            </td>
-                            <td><span class="r">U</span>
-                                <span id="PzU">8073</span>
-                            </td>
-                            <td><span class="r">V</span>
-                                <span id="PzV">1192</span>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td colspan="3"><span class="r">W</span>
-                                <span id="PzW">7148</span>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-        </div>
-        <div class="col-md-5 col-xl-5">
-            <div class="h-100 flex-column d-flex">
-
-                <div class="text-center position-relative mt-3 mb-3 icon">
-                    <img src="../assets/images/KIMCO ICONS/4D_JPool_en-us.png" class="w-100">
-                    <div class="jppool-box">
-                        <div>
-                            <span id="4d_jpool">USD2,472,275.10</span>
-                            
-                            <span class="dtstamp dtstamp--mod2">As per Yesterday, 18 Aug 2021</span>
-
-                        </div>
+    <div class="content-wrap">
+    <div class="container clearfix p-3">
+        <div class="row">
+            <div class="col-xl-8 offset-xl-2">
+                <div class="mt-2 text-justify c-gray">
+                    <h2 class="c-themered text-center">JACKPOT CALCULATOR</h2>
+                    <div class="mt-3 mb-3">
+                        Simply fill in the amount have purchased per 4D number, and if you are purchased your number set via iBox method, then each individual of your 4D number must have minimum value of USD1 (or RM4) in order to qualify one (1) unit of our Jackpot. All incoming and outgoing in accumulating our Jackpot pool are unified under our predefined GD Jackpot Exchange Rate".
                     </div>
-                </div>
+                    <div class="tabs clearfix ui-tabs ui-corner-all ui-widget ui-widget-content" id="tab-1">
 
-                <div class="flex-fill">
+                        <ul class="tab-nav clearfix ui-tabs-nav ui-corner-all ui-helper-reset ui-helper-clearfix ui-widget-header" role="tablist">
+                            <li role="tab" tabindex="0" class="ui-tabs-tab ui-corner-top ui-state-default ui-tab ui-tabs-active ui-state-active" aria-controls="tabs-usd" aria-labelledby="ui-id-1" aria-selected="true" aria-expanded="true"><a href="#tabs-usd" role="presentation" tabindex="-1" class="ui-tabs-anchor" id="ui-id-1"><span class="flag-icon flag-icon-us"></span>&nbsp;&nbsp;USD</a></li>
+                            <li role="tab" tabindex="-1" class="ui-tabs-tab ui-corner-top ui-state-default ui-tab" aria-controls="tabs-myr" aria-labelledby="ui-id-2" aria-selected="false" aria-expanded="false"><a href="#tabs-myr" role="presentation" tabindex="-1" class="ui-tabs-anchor" id="ui-id-2"><span class="flag-icon flag-icon-us"></span>&nbsp;&nbsp;MYR</a></li>
+                            <li role="tab" tabindex="-1" class="ui-tabs-tab ui-corner-top ui-state-default ui-tab" aria-controls="tabs-thb" aria-labelledby="ui-id-3" aria-selected="false" aria-expanded="false"><a href="#tabs-thb" role="presentation" tabindex="-1" class="ui-tabs-anchor" id="ui-id-3"><span class="flag-icon flag-icon-th"></span>&nbsp;&nbsp;THB</a></li>
+                            <li role="tab" tabindex="-1" class="ui-tabs-tab ui-corner-top ui-state-default ui-tab" aria-controls="tabs-idr" aria-labelledby="ui-id-4" aria-selected="false" aria-expanded="false"><a href="#tabs-idr" role="presentation" tabindex="-1" class="ui-tabs-anchor" id="ui-id-4"><span class="flag-icon flag-icon-id"></span>&nbsp;&nbsp;IDR</a></li>
+                            <li role="tab" tabindex="-1" class="ui-tabs-tab ui-corner-top ui-state-default ui-tab" aria-controls="tabs-rmb" aria-labelledby="ui-id-5" aria-selected="false" aria-expanded="false"><a href="#tabs-rmb" role="presentation" tabindex="-1" class="ui-tabs-anchor" id="ui-id-5"><span class="flag-icon flag-icon-cn"></span>&nbsp;&nbsp;RMB</a></li>
+                        </ul>
 
-                    <div class="fourd-jp-v2 v-mid p-4">
-                        <img class="w-100 m-auto-hori mb-3" src="../assets/images/KIMCO ICONS/jp-result_en-us.png">
-                        <div class="fourd-jp-v2-top">
-                            <div class="fourd-header">
-                                <span id="4d_jpbonus">No Bonus</span>
+                        <div class="tab-container">
+                            <div class="tab-content clearfix ui-tabs-panel ui-corner-bottom ui-widget-content" id="tabs-usd" aria-labelledby="ui-id-1" role="tabpanel" aria-hidden="false">
+                                <div class="bonus-calculator bonus-calculator--big p-4 bg-verylightgray w-100 text-center m-hide position-relative">
+                                    <h3 class="mb-2 inline-block ">Qualified Bonus Unit Calculator</h3><br>
+                                    $ <input type="number" step="0.01" onchange="calcBonusUnits(this,1)" class="input-1 mb-2" placeholder="Enter Bet Amount">&nbsp;&nbsp;/&nbsp;&nbsp;$1
+                                    <div class="btn-1 btn-1-red inline-block ml-2">Calculate</div><hr>
+                                    <h1 class="inline-block mb-0 c-themered"><b class="bonusUnits">0</b> units</h1>
+                                <div class="jpi-abs-info on-hover-pointer"><a class="ttip-estjp" href="javascript:;" data-toggle="tooltip" data-placement="bottom" data-html="true" data-trigger="click" data-original-title="Click here to <a href='/jackpot/calculator'>Learn More</a>"> <i class="icon-question-sign"></i></a></div></div>
+
+                                <div class="bonus-calculator p-3 bg-verylightgray w-100 text-center xl-hide position-relative">
+                                    <h4 class="mb-2 inline-block ">Qualified Bonus Unit Calculator</h4><br>
+                                    $ <input type="number" step="0.01" onchange="calcBonusUnits(this,1)" class="input-1 mb-2" placeholder="Enter Bet Amount">&nbsp;&nbsp;/&nbsp;&nbsp;$1
+                                    <div class="btn-1 btn-1-red inline-block ml-2">Calculate</div><hr>
+                                    <h2 class="inline-block mb-0 c-themered"><b class="bonusUnits">0</b> units</h2>
+                                <div class="jpi-abs-info on-hover-pointer"><a class="ttip-estjp" href="javascript:;" data-toggle="tooltip" data-placement="bottom" data-html="true" data-trigger="click" data-original-title="Click here to <a href='/jackpot/calculator'>Learn More</a>"> <i class="icon-question-sign"></i></a></div></div>
                             </div>
-                            <div>
-                                <span id="4d_jpalphnum">A : 6542</span>
+
+                            <div class="tab-content clearfix ui-tabs-panel ui-corner-bottom ui-widget-content d-none" id="tabs-rmb" aria-labelledby="ui-id-5" role="tabpanel" aria-hidden="true">
+                                <div class="bonus-calculator bonus-calculator--big p-4 bg-verylightgray w-100 text-center m-hide position-relative">
+                                    <h3 class="mb-2 inline-block ">Qualified Bonus Unit Calculator</h3><br>
+                                    ¥ <input type="number" step="0.01" onchange="calcBonusUnits(this,7)" class="input-1 mb-2" placeholder="Enter Bet Amount">&nbsp;&nbsp;/&nbsp;&nbsp;¥7
+                                    <div class="btn-1 btn-1-red inline-block ml-2">Calculate</div><hr>
+                                    <h1 class="inline-block mb-0 c-themered"><b class="bonusUnits">0</b> units</h1>
+                                <div class="jpi-abs-info on-hover-pointer"><a class="ttip-estjp" href="javascript:;" data-toggle="tooltip" data-placement="bottom" data-html="true" data-trigger="click" data-original-title="Click here to <a href='/jackpot/calculator'>Learn More</a>"> <i class="icon-question-sign"></i></a></div></div>
+
+                                <div class="bonus-calculator p-3 bg-verylightgray w-100 text-center xl-hide position-relative">
+                                    <h4 class="mb-2 inline-block ">Qualified Bonus Unit Calculator</h4><br>
+                                    ¥ <input type="number" step="0.01" onchange="calcBonusUnits(this,7)" class="input-1 mb-2" placeholder="Enter Bet Amount">&nbsp;&nbsp;/&nbsp;&nbsp;¥7
+                                    <div class="btn-1 btn-1-red inline-block ml-2">Calculate</div><hr>
+                                    <h2 class="inline-block mb-0 c-themered"><b class="bonusUnits">0</b> units</h2>
+                                <div class="jpi-abs-info on-hover-pointer"><a class="ttip-estjp" href="javascript:;" data-toggle="tooltip" data-placement="bottom" data-html="true" data-trigger="click" data-original-title="Click here to <a href='/jackpot/calculator'>Learn More</a>"> <i class="icon-question-sign"></i></a></div></div>
                             </div>
-                            <div>
-                                <span id="4d_jpperunit" class="c-gold">USD0.00/unit</span>
+
+                            <div class="tab-content clearfix ui-tabs-panel ui-corner-bottom ui-widget-content d-none" id="tabs-myr" aria-labelledby="ui-id-2" role="tabpanel" aria-hidden="true">
+                                <div class="bonus-calculator bonus-calculator--big p-4 bg-verylightgray w-100 text-center m-hide position-relative">
+                                    <h3 class="mb-2 inline-block ">Qualified Bonus Unit Calculator</h3><br>
+                                    RM <input type="number" step="0.01" onchange="calcBonusUnits(this,4)" class="input-1 mb-2" placeholder="Enter Bet Amount">&nbsp;&nbsp;/&nbsp;&nbsp;RM4
+                                    <div class="btn-1 btn-1-red inline-block ml-2">Calculate</div><hr>
+                                    <h1 class="inline-block mb-0 c-themered"><b class="bonusUnits">0</b> units</h1>
+                                <div class="jpi-abs-info on-hover-pointer"><a class="ttip-estjp" href="javascript:;" data-toggle="tooltip" data-placement="bottom" data-html="true" data-trigger="click" data-original-title="Click here to <a href='/jackpot/calculator'>Learn More</a>"> <i class="icon-question-sign"></i></a></div></div>
+
+                                <div class="bonus-calculator p-3 bg-verylightgray w-100 text-center xl-hide position-relative">
+                                    <h4 class="mb-2 inline-block ">Qualified Bonus Unit Calculator</h4><br>
+                                    RM <input type="number" step="0.01" onchange="calcBonusUnits(this,4)" class="input-1 mb-2" placeholder="Enter Bet Amount">&nbsp;&nbsp;/&nbsp;&nbsp;RM4
+                                    <div class="btn-1 btn-1-red inline-block ml-2">Calculate</div><hr>
+                                    <h2 class="inline-block mb-0 c-themered"><b class="bonusUnits">0</b> units</h2>
+                                <div class="jpi-abs-info on-hover-pointer"><a class="ttip-estjp" href="javascript:;" data-toggle="tooltip" data-placement="bottom" data-html="true" data-trigger="click" data-original-title="Click here to <a href='/jackpot/calculator'>Learn More</a>"> <i class="icon-question-sign"></i></a></div></div>
                             </div>
-                        </div>
-                        <hr class="white-translucent w-75">
-                        <div class="fourd-jp-v2-btm">
-                            <div class="fourd-header">
-                                Number of Units : <span id="4d_jptotalunit">0</span>
+
+                            <div class="tab-content clearfix ui-tabs-panel ui-corner-bottom ui-widget-content d-none" id="tabs-idr" aria-labelledby="ui-id-4" role="tabpanel" aria-hidden="true">
+                                <div class="bonus-calculator bonus-calculator--big p-4 bg-verylightgray w-100 text-center m-hide position-relative">
+                                    <h3 class="mb-2 inline-block ">Qualified Bonus Unit Calculator</h3><br>
+                                    IDR <input type="number" step="0.01" onchange="calcBonusUnits(this,14000)" class="input-1 mb-2" placeholder="Enter Bet Amount">&nbsp;&nbsp;/&nbsp;&nbsp;IDR14,000
+                                    <div class="btn-1 btn-1-red inline-block ml-2">Calculate</div><hr>
+                                    <h1 class="inline-block mb-0 c-themered"><b class="bonusUnits">0</b> units</h1>
+                                <div class="jpi-abs-info on-hover-pointer"><a class="ttip-estjp" href="javascript:;" data-toggle="tooltip" data-placement="bottom" data-html="true" data-trigger="click" data-original-title="Click here to <a href='/jackpot/calculator'>Learn More</a>"> <i class="icon-question-sign"></i></a></div></div>
+
+                                <div class="bonus-calculator p-3 bg-verylightgray w-100 text-center xl-hide position-relative">
+                                    <h4 class="mb-2 inline-block ">Qualified Bonus Unit Calculator</h4><br>
+                                    IDR <input type="number" step="0.01" onchange="calcBonusUnits(this,14000)" class="input-1 mb-2" placeholder="Enter Bet Amount">&nbsp;&nbsp;/&nbsp;&nbsp;IDR14,000
+                                    <div class="btn-1 btn-1-red inline-block ml-2">Calculate</div><hr>
+                                    <h2 class="inline-block mb-0 c-themered"><b class="bonusUnits">0</b> units</h2>
+                                <div class="jpi-abs-info on-hover-pointer"><a class="ttip-estjp" href="javascript:;" data-toggle="tooltip" data-placement="bottom" data-html="true" data-trigger="click" data-original-title="Click here to <a href='/jackpot/calculator'>Learn More</a>"> <i class="icon-question-sign"></i></a></div></div>
                             </div>
-                            <div>
-                                <span id="4d_jppayout">USD0.00 ( USD2,472,275.10 x 0% )</span>
-                            </div>
-                            <div>
-                                <span id="4d_jppyperwin" class="c-gold">USD0.00 ( USD0.00 / 0 )</span>
+
+                            <div class="tab-content clearfix ui-tabs-panel ui-corner-bottom ui-widget-content d-none" id="tabs-thb" aria-labelledby="ui-id-3" role="tabpanel" aria-hidden="true">
+                                <div class="bonus-calculator bonus-calculator--big p-4 bg-verylightgray w-100 text-center m-hide position-relative">
+                                    <h3 class="mb-2 inline-block ">Qualified Bonus Unit Calculator</h3><br>
+                                    ฿ <input type="number" step="0.01" onchange="calcBonusUnits(this,30)" class="input-1 mb-2" placeholder="Enter Bet Amount">&nbsp;&nbsp;/&nbsp;&nbsp;฿30
+                                    <div class="btn-1 btn-1-red inline-block ml-2">Calculate</div><hr>
+                                    <h1 class="inline-block mb-0 c-themered"><b class="bonusUnits">0</b> units</h1>
+                                <div class="jpi-abs-info on-hover-pointer"><a class="ttip-estjp" href="javascript:;" data-toggle="tooltip" data-placement="bottom" data-html="true" data-trigger="click" data-original-title="Click here to <a href='/jackpot/calculator'>Learn More</a>"> <i class="icon-question-sign"></i></a></div></div>
+
+                                <div class="bonus-calculator p-3 bg-verylightgray w-100 text-center xl-hide position-relative">
+                                    <h4 class="mb-2 inline-block ">Qualified Bonus Unit Calculator</h4><br>
+                                    ฿ <input type="number" step="0.01" onchange="calcBonusUnits(this,30)" class="input-1 mb-2" placeholder="Enter Bet Amount">&nbsp;&nbsp;/&nbsp;&nbsp;฿30
+                                    <div class="btn-1 btn-1-red inline-block ml-2">Calculate</div><hr>
+                                    <h2 class="inline-block mb-0 c-themered"><b class="bonusUnits">0</b> units</h2>
+                                <div class="jpi-abs-info on-hover-pointer"><a class="ttip-estjp" href="javascript:;" data-toggle="tooltip" data-placement="bottom" data-html="true" data-trigger="click" data-original-title="Click here to <a href='/jackpot/calculator'>Learn More</a>"> <i class="icon-question-sign"></i></a></div></div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <hr class="mt-4 mb-2 gold">
-    <div class="row" id="sec-6d">
-        <div class="col-12">
-            <div class="text-center mt-3">
-                <table class="res-tbl-1 res-tbl-1--6d res-tbl-1--6d-yellow w-100">
-                    <thead>
-                        <tr>
-                            <th colspan="14">6D</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1st <span class="m-hide">Prize</span></td>
-                            
-                            <td colspan="13">
-                                <div class="text-center sixd-firstpz">
-                                    <span class="L6_0">2</span>
-                                    <span class="L6_1">4</span>
-                                    <span class="L6_2">3</span>
-                                    <span class="L6_3">8</span>
-                                    <span class="L6_4">8</span>
-                                    <span class="L6_5">9</span>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>2nd <span class="m-hide">Prize</span></td>
-                            <td class="L6_0">2</td>
-                            <td class="L6_1">4</td>
-                            <td class="L6_2">3</td>
-                            <td class="L6_3">8</td>
-                            <td class="L6_4">8</td>
-                            <td class="void"><span></span></td>
-                            <td class="voidor">or</td>
-                            <td class="void"><span></span></td>
-                            <td class="L6_1">4</td>
-                            <td class="L6_2">3</td>
-                            <td class="L6_3">8</td>
-                            <td class="L6_4">8</td>
-                            <td class="L6_5">9</td>
-                        </tr>
-                        <tr>
-                            <td>3rd <span class="m-hide">Prize</span></td>
-                            <td class="L6_0">2</td>
-                            <td class="L6_1">4</td>
-                            <td class="L6_2">3</td>
-                            <td class="L6_3">8</td>
-                            <td class="void"><span></span></td>
-                            <td class="void"><span></span></td>
-                            <td class="voidor">or</td>
-                            <td class="void"><span></span></td>
-                            <td class="void"><span></span></td>
-                            <td class="L6_2">3</td>
-                            <td class="L6_3">8</td>
-                            <td class="L6_4">8</td>
-                            <td class="L6_5">9</td>
-                        </tr>
-
-                        <tr>
-                            <td>4th <span class="m-hide">Prize</span></td>
-                            <td class="L6_0">2</td>
-                            <td class="L6_1">4</td>
-                            <td class="L6_2">3</td>
-                            <td class="void"><span></span></td>
-                            <td class="void"><span></span></td>
-                            <td class="void"><span></span></td>
-                            <td class="voidor">or</td>
-                            <td class="void"><span></span></td>
-                            <td class="void"><span></span></td>
-                            <td class="void"><span></span></td>
-                            <td class="L6_3">8</td>
-                            <td class="L6_4">8</td>
-                            <td class="L6_5">9</td>
-                        </tr>
-
-                        <tr>
-                            <td>5th <span class="m-hide">Prize</span></td>
-                            <td class="L6_0">2</td>
-                            <td class="L6_1">4</td>
-                            <td class="void"><span></span></td>
-                            <td class="void"><span></span></td>
-                            <td class="void"><span></span></td>
-                            <td class="void"><span></span></td>
-                            <td class="voidor">or</td>
-                            <td class="void"><span></span></td>
-                            <td class="void"><span></span></td>
-                            <td class="void"><span></span></td>
-                            <td class="void"><span></span></td>
-                            <td class="L6_4">8</td>
-                            <td class="L6_5">9</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        <div class="col-12 mt-3 hidden">
-            <div class="row">
-                <div class="col-md-4  v-bottom">
-                    <div class="text-center position-relative icon">
-                        <img src="/images/6D_JPool_en-us.png" class="w-100">
-                        <div class="jppool-box">
-                            <div>
-                                USD574,870.65
-                                
-                                <span class="dtstamp dtstamp--mod2">As per Yesterday, 18 Aug 2021</span>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-8 ">
-
-                    <div class="sixd-jp-v2 v-mid p-4 m-hide">
-                        <img class="sm-100 w-50 m-auto-hori mb-4" src="/images/jp-result_en-us.png">
-                        <div class="row">
-                            <div class="col-md-6 v-mid sixd-jp-v2-left">
-                                <div class="sixd-header">
-                                    No Bonus
-                                </div>
-                                <div>
-                                    6542
-                                </div>
-                                <div class="c-gold">
-                                    USD0.00/unit
-                                </div>
-                                <hr class="white-translucent hr-vertical">
-                            </div>
-
-                            <div class="col-md-6 v-mid">
-                                <div class="sixd-header">
-                                    Number of Units : 0
-                                </div>
-                                <div>
-                                    USD0.00 ( USD574,870.65 x 0% )
-                                </div>
-                                <div class="c-gold">
-                                    USD0.00 ( USD0.00 / 0 )
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    
-                    <div class="fourd-jp-v2 v-mid p-4 mt-3 xl-hide">
-                        <img class="sm-100 w-75 m-auto-hori mb-3" src="/images/jp-result_en-us.png">
-                        <div class="fourd-jp-v2-top">
-                            <div class="fourd-header">
-                                No Bonus
-                            </div>
-                            <div>
-                                6542
-                            </div>
-                            <div>
-                                USD0.00/unit
-                            </div>
-                        </div>
-                        <hr class="white-translucent w-75">
-                        <div class="fourd-jp-v2-btm">
-                            <div class="fourd-header">
-                                Number of Units : 0
-                            </div>
-                            <div>
-                                USD0.00 ( USD574,870.65 x 0% )
-                            </div>
-                            <div>
-                                USD0.00 ( USD0.00 / 0 )
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
             </div>
         </div>
 
     </div>
-    
 </div>
-</div>
-                </div>
-            </div>
-        </div>
 
-    
-        
-    </section>
+    <!--Script-->
+    <script>
+        let tab1 = document.querySelectorAll(".ui-tabs-tab")[0];
+        let tab2 = document.querySelectorAll(".ui-tabs-tab")[1];
+        let tab3 = document.querySelectorAll(".ui-tabs-tab")[2];
+        let tab4 = document.querySelectorAll(".ui-tabs-tab")[3];
+        let tab5 = document.querySelectorAll(".ui-tabs-tab")[4];
 
-    
-    <!--Scripts-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://kit.fontawesome.com/ccf7730c24.js"></script>
-    <script src="../Scripts/header1.js"></script>
+        let div1 = document.querySelectorAll(".tab-content")[0];
+        let div2 = document.querySelectorAll(".tab-content")[1];
+        let div3 = document.querySelectorAll(".tab-content")[2];
+        let div4 = document.querySelectorAll(".tab-content")[3];
+        let div5 = document.querySelectorAll(".tab-content")[4];
+
+        tab1.addEventListener("click", function () {
+            tab2.classList.remove("ui-tabs-active");
+            tab3.classList.remove("ui-tabs-active");
+            tab4.classList.remove("ui-tabs-active");
+            tab5.classList.remove("ui-tabs-active");
+
+            div2.classList.add("d-none");
+            div3.classList.add("d-none");
+            div4.classList.add("d-none");
+            div5.classList.add("d-none");
+
+            tab1.classList.add("ui-tabs-active");
+            div1.classList.remove("d-none");
+
+        })
+        tab2.addEventListener("click", function () {
+            tab1.classList.remove("ui-tabs-active");
+            tab3.classList.remove("ui-tabs-active");
+            tab4.classList.remove("ui-tabs-active");
+            tab5.classList.remove("ui-tabs-active");
+
+            div1.classList.add("d-none");
+            div3.classList.add("d-none");
+            div4.classList.add("d-none");
+            div5.classList.add("d-none");
+
+            tab2.classList.add("ui-tabs-active");
+            div2.classList.remove("d-none");
+
+        })
+        tab3.addEventListener("click", function () {
+            tab1.classList.remove("ui-tabs-active");
+            tab2.classList.remove("ui-tabs-active");
+            tab4.classList.remove("ui-tabs-active");
+            tab5.classList.remove("ui-tabs-active");
+
+            div1.classList.add("d-none");
+            div2.classList.add("d-none");
+            div4.classList.add("d-none");
+            div5.classList.add("d-none");
+
+            tab3.classList.add("ui-tabs-active");
+            div3.classList.remove("d-none");
+
+        })
+        tab4.addEventListener("click", function () {
+            tab1.classList.remove("ui-tabs-active");
+            tab2.classList.remove("ui-tabs-active");
+            tab3.classList.remove("ui-tabs-active");
+            tab5.classList.remove("ui-tabs-active");
+
+            div1.classList.add("d-none");
+            div2.classList.add("d-none");
+            div3.classList.add("d-none");
+            div5.classList.add("d-none");
+
+            tab4.classList.add("ui-tabs-active");
+            div4.classList.remove("d-none");
+
+        })
+        tab5.addEventListener("click", function () {
+            tab1.classList.remove("ui-tabs-active");
+            tab2.classList.remove("ui-tabs-active");
+            tab3.classList.remove("ui-tabs-active");
+            tab4.classList.remove("ui-tabs-active");
+
+            div1.classList.add("d-none");
+            div2.classList.add("d-none");
+            div3.classList.add("d-none");
+            div4.classList.add("d-none");
+
+            tab5.classList.add("ui-tabs-active");
+            div5.classList.remove("d-none");
+
+        })
+    </script>
     
 </asp:Content>
 

@@ -681,7 +681,7 @@
                            <ul class="sf-js-enabled d-block" style="touch-action: pan-y;">
                                 <li><a href="home.aspx">Home</a></li>
                                 <li class="sub-menu"><a href="#" class="sf-with-ul">Our Games</a>
-                                    <ul class="menu-pos-invert" id="l1" style="display:none;">
+                                    <ul class="menu-pos-invert" id="L1" style="display:none;">
                                         
                                         <li><a href="4D.aspx">KIM LOTTO 4D</a></li>
                                         <li><a href="6D.aspx">KIM LOTTO 6D</a></li>
@@ -691,7 +691,7 @@
                                     </ul>
                                 </li>
                                 <li class="sub-menu"><a href="#" class="sf-with-ul">About Us</a>
-                                    <ul class="menu-pos-invert" id="l2" style="display:none;">
+                                    <ul class="menu-pos-invert" id="L2" style="display:none;">
                                         <li><a href="about-us.aspx">About Us</a></li>
                                         <li><a href="long-long.aspx">About LONG LONG</a></li>
                                         <li><a href="about-corporate-value.aspx">Our Corporate Value</a></li>
@@ -701,7 +701,7 @@
                                     </ul>
                                 </li>
                                 <li class="sub-menu"><a href="#" class="sf-with-ul">Results</a>
-                                    <ul class="menu-pos-invert" id="l3" style="display: none;">
+                                    <ul class="menu-pos-invert" id="L3" style="display: none;">
                                         <li><a href="resultToday.aspx">Today Result</a></li>
                                         <li><a href="resultPast.aspx">Past Results</a></li>
                                         <li><a href="resultJackpotWinner.aspx">6+1D Jackpot Winner</a></li>
@@ -715,13 +715,13 @@
                                     </ul>
                                 </li>
                                 <li class="sub-menu"><a href="#" class="sf-with-ul">Jackpot</a>
-                                    <ul class="menu-pos-invert" id="l4" style="display: none;">
+                                    <ul class="menu-pos-invert" id="L4" style="display: none;">
                                         <li><a href="dragonJackpot.aspx">Dragon Jackpot 6+1D</a></li>
-                                        <li><a href="/jackpot/tracker">4D Jackpot Tracker</a></li>
-                                        <li><a href="/jackpot/how-it-works">How It Works?</a></li>
-                                        <li><a href="/jackpot/calculator">Jackpot Calculator</a></li>
-                                        <li><a href="/jackpot/how-to-win">How to Win?</a></li>
-                                        <li><a href="/jackpot/sharing-rules">Sharing Rules</a></li>
+                                        <li><a href="jackpot4D.aspx">4D Jackpot Tracker</a></li>
+                                        <li><a href="jackpotHowItWorks.aspx">How It Works?</a></li>
+                                        <li><a href="jackpotCalculator.aspx">Jackpot Calculator</a></li>
+                                        <li><a href="jackpotHowToWin.aspx">How to Win?</a></li>
+                                        <li><a href="jackpotSharingRules.aspx">Sharing Rules</a></li>
                                     </ul>
                                 </li>
                                 <%--<li class="sub-menu"><a href="#" class="sf-with-ul">The Community</a>

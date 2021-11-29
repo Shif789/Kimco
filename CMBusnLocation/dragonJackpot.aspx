@@ -1187,6 +1187,15 @@ a {
             width: 100% !important;
         }
 
+        .bg-black-gold-stroke {
+            background-color: #000;
+            border: 7px solid #fff760;
+            border-radius: 30px;
+        }
+        .c-sunglow {
+            color: #fbc931 !important;
+        }
+
     </style>
     <!--Start Header-->
     <header id="header" class="full-header">
@@ -1228,7 +1237,7 @@ a {
                             <ul class="sf-js-enabled d-block" style="touch-action: pan-y;">
                                 <li><a href="home.aspx">Home</a></li>
                                 <li class="sub-menu"><a href="#" class="sf-with-ul">Our Games</a>
-                                    <ul class="menu-pos-invert" id="l1" style="display:none;">
+                                    <ul class="menu-pos-invert" id="L1" style="display:none;">
                                         
                                         <li><a href="4D.aspx">KIM LOTTO 4D</a></li>
                                         <li><a href="6D.aspx">KIM LOTTO 6D</a></li>
@@ -1238,7 +1247,7 @@ a {
                                     </ul>
                                 </li>
                                 <li class="sub-menu"><a href="#" class="sf-with-ul">About Us</a>
-                                    <ul class="menu-pos-invert" id="l2" style="display:none;">
+                                    <ul class="menu-pos-invert" id="L2" style="display:none;">
                                         <li><a href="about-us.aspx">About Us</a></li>
                                         <li><a href="long-long.aspx">About LONG LONG</a></li>
                                         <li><a href="about-corporate-value.aspx">Our Corporate Value</a></li>
@@ -1248,7 +1257,7 @@ a {
                                     </ul>
                                 </li>
                                 <li class="sub-menu"><a href="#" class="sf-with-ul">Results</a>
-                                    <ul class="menu-pos-invert" id="l3" style="display: none;">
+                                    <ul class="menu-pos-invert" id="L3" style="display: none;">
                                         <li><a href="resultToday.aspx">Today Result</a></li>
                                         <li><a href="resultPast.aspx">Past Results</a></li>
                                         <li><a href="resultJackpotWinner.aspx">6+1D Jackpot Winner</a></li>
@@ -1262,13 +1271,13 @@ a {
                                     </ul>
                                 </li>
                                 <li class="sub-menu"><a href="#" class="sf-with-ul">Jackpot</a>
-                                    <ul class="menu-pos-invert" id="l4" style="display: none;">
+                                    <ul class="menu-pos-invert" id="L4" style="display: none;">
                                         <li><a href="dragonJackpot.aspx">Dragon Jackpot 6+1D</a></li>
-                                        <li><a href="/jackpot/tracker">4D Jackpot Tracker</a></li>
-                                        <li><a href="/jackpot/how-it-works">How It Works?</a></li>
-                                        <li><a href="/jackpot/calculator">Jackpot Calculator</a></li>
-                                        <li><a href="/jackpot/how-to-win">How to Win?</a></li>
-                                        <li><a href="/jackpot/sharing-rules">Sharing Rules</a></li>
+                                        <li><a href="jackpot4D.aspx">4D Jackpot Tracker</a></li>
+                                        <li><a href="jackpotHowItWorks.aspx">How It Works?</a></li>
+                                        <li><a href="jackpotCalculator.aspx">Jackpot Calculator</a></li>
+                                        <li><a href="jackpotHowToWin.aspx">How to Win?</a></li>
+                                        <li><a href="jackpotSharingRules.aspx">Sharing Rules</a></li>
                                     </ul>
                                 </li>
                                 <%--<li class="sub-menu"><a href="#" class="sf-with-ul">The Community</a>
@@ -1312,282 +1321,176 @@ a {
             </header>
     <!-- END HEADER -->
     <div class="banner-box">
-        <img src="../assets/images/KIMCO ICONS/20190507 web Cover-15.jpg" class="m-hide">
-        <img src="../assets/images/KIMCO ICONS/20190820 web Cover Mobile-03.jpg" class="xl-hide">
+        <img src="../assets/images/KIMCO ICONS/20190507 web Cover-03.jpg" class="m-hide">
+        <img src="../assets/images/KIMCO ICONS/20190820 web Cover Mobile-05.jpg" class="xl-hide">
         <div class="banner-box-title v-mid">
-            <div><span class="inline-block uppercase">Results</span></div>
+            <div><span class="inline-block uppercase">Bonus Jackpot</span></div>
         </div>
     </div>
-   <div class="content-wrap bg-verylightgray" id="ourgame-section">
-        <div class="container clearfix p-3">
-            <h3 class="m-0 bg-golden c-themered text-center uppercase">Prize Calculator</h3>
+   <div class="pt-3 pb-3 bg-kamekame text-justify text-white">
 
-            <div class="center mt-3">
-                <div class="col-md-6 offset-md-3 col-xl-4 offset-xl-4">
-                    
+    <div class="text-center btn-1 button-yellow on-hover-pointer" style=" LEFT: 2%; BOTTOM: 2%; position: fixed; Z-INDEX: 9;background-color: yellow;" data-toggle="modal" data-target="#exampleModal"><h4>Download PDF</h4></div>
+    <div class="col-md-8 offset-md-2 p-3">
+        <div class="bg-black-gold-stroke p-3 p-md-5">
+            <div class="w-50 sm-75 m-auto-hori">
+                <img src="../assets/images/KIMCO ICONS/dragonjp_red.png" class="w-100">
+            </div>
+            <p class="mt-3 mb-0">
+                In daily basis, we're giving FREE Jackpot for every USD1 purchase of our 4D game, while now giving you another greater <span class="c-golden">weeekly Dragon Jackpot 6+1D for FREE</span> if you have any game receipt with minimum USD3 (or equal to USD3 / RM12 / THB90 / IDR42,000), regardless any product or game type. With our Dragon Jackpot, now you can accumulate your weekly spending and stand a chance to strike for <span class="c-golden">our weekly bonus on every Sunday!</span>. Any purchase of USD3 (RM12 / THB90 / IDR42,000) with Any of GDLotto game in a single receipt, and now you can stand a chance to win at least <span class="c-golden">USD70,000</span> every week for FREE only at GDLotto! We will randomly assign you a 7 digit Lucky numbers for every USD3 worth in a single receipt. Imagine you can now spend even more dynamic than ever, with no limit for any product or game type, but still qualify for our most exceptional 'One to One' Jackpot. And you can still win our <span class="c-golden">consolation prize of USD3,000</span> if strike the last 6 digit of our 6+1D result.
+            </p>
+            <p class="mt-2">
+                Click <a href="/redirect/?h=7DJPWIN" class="c-golden">here</a> to check on our past 6+1D Jackpot lucky winners result.
+            </p>
 
-                    
+            <div class="tabs tabs-bb clearfix mt-3 mb-1 slide-tab-dark ui-tabs ui-corner-all ui-widget ui-widget-content" id="tab-9">
 
-                    <div class="row text-left mt-2">
-                        <div class="col-md-4 txt13">
-                            Draw Date :
-                        </div>
-                        <div class="col-md-8">
-                            
-                            <input name="ctl00$cphBody$inpDate" type="date" value="2021-11-02" onchange="" onkeypress="" id="cphBody_inpDate" class="default input-2 datepicker w-100 text-center large-font" placeholder="YYYY-MM-DD" required="" autocomplete="off">
-                        </div>
+                <div class="slide-tab">
+                    <ul class="slide-tab--ul clearfix ui-tabs-nav ui-corner-all ui-helper-reset ui-helper-clearfix ui-widget-header" role="tablist">
+                        <li role="tab" tabindex="0" class="ui-tabs-tab ui-corner-top ui-state-default ui-tab ui-tabs-active ui-state-active" aria-controls="jackpot-structure-and-bonus" aria-labelledby="ui-id-1" aria-selected="true" aria-expanded="true"><a href="#jackpot-structure-and-bonus" role="presentation" tabindex="-1" class="ui-tabs-anchor" id="ui-id-1">Jackpot Structure</a></li>
+                        <li role="tab" tabindex="-1" class="ui-tabs-tab ui-corner-top ui-state-default ui-tab" aria-controls="results-and-prize" aria-labelledby="ui-id-2" aria-selected="false" aria-expanded="false"><a href="#results-and-prize" role="presentation" tabindex="-1" class="ui-tabs-anchor" id="ui-id-2">Results &amp; Prizes</a></li>
+                        <li role="tab" tabindex="-1" class="ui-tabs-tab ui-corner-top ui-state-default ui-tab" aria-controls="features" aria-labelledby="ui-id-3" aria-selected="false" aria-expanded="false"><a href="#features" role="presentation" tabindex="-1" class="ui-tabs-anchor" id="ui-id-3">Features</a></li>
+                    </ul>
+                    <div class="slide-tab--bg" style="width: calc(33.3333%);">
+                        <span class="slide-tab--bgspn1">
+                            <span class="slide-tab--bgspn2">Jackpot Structure</span>
+                        </span>
                     </div>
                 </div>
-            </div>
 
-            <hr class="dashed">
-            <div class="text-center col-md-6 offset-md-3">To ease your understanding, below is our latest result table,
-and you can simply select any available result in the table, select your betting
-format, put in your bet value, then generate your winning prize.</div>
+                <div class="tab-container text-justify p-lg-5">
 
-            <div class="tabs tabs-bb clearfix mt-3 ui-tabs ui-corner-all ui-widget ui-widget-content" id="tab-9">
-                <div class="row">
-                    <div class="col-md-6 offset-md-3">
-                        <div class="slide-tab mt-3">
-                            <ul class="slide-tab--ul clearfix ui-tabs-nav ui-corner-all ui-helper-reset ui-helper-clearfix ui-widget-header" role="tablist">
-                                <li role="tab" tabindex="0" class="ui-tabs-tab ui-corner-top ui-state-default ui-tab ui-tabs-active ui-state-active" aria-controls="4d-prize" aria-labelledby="ui-id-1" aria-selected="true" aria-expanded="true"><a href="#4d-prize" role="presentation" tabindex="-1" class="ui-tabs-anchor" id="ui-id-1">4D</a></li>
-                                <li role="tab" tabindex="-1" class="ui-tabs-tab ui-corner-top ui-state-default ui-tab" aria-controls="6d-prize" aria-labelledby="ui-id-2" aria-selected="false" aria-expanded="false"><a href="#6d-prize" role="presentation" tabindex="-1" class="ui-tabs-anchor" id="ui-id-2">6D</a></li>
-                            </ul>
-                            <div class="slide-tab--bg" style="width: calc(50%);">
-                                <span class="slide-tab--bgspn1">
-                                    <span class="slide-tab--bgspn2">4D</span>
-                                </span>
+                    <div class="tab-content clearfix ui-tabs-anchor ui-corner-bottom ui-widget-content" id="jstructure" aria-labelledby="ui-id-1" role="tabpanel" aria-hidden="false">
+                        <h3 class="mb-3 c-sunglow uppercase text-left">Our Bonus Jackpot Structure</h3>
+                        <div class="mb-5">
+                            <img class="w-100" src="../assets/images/KIMCO ICONS/djp-structure_en-us.png">
+                        </div>
+
+                        <h3 class="mb-3 c-sunglow uppercase text-left">Our Daily VS Weekly Bonus</h3>
+                        <p>
+                            As the leader of Asian Lottery leader, we are committed to deliver the most excitement to our users. Your everyday investment will gain our daily surprise, while you weekly accumulated investment will stand another bigger chances to strike another bigger surprise.
+                        </p>
+                        <p>
+                            So what's the different between our Daily and Weekly Bonus at GDLotto? Below are the comparison table for our users to understand in more details:
+                        </p>
+                        <div class="w-75 sm-100 m-auto-hori">
+                            <img class="w-100" src="../assets/images/KIMCO ICONS/djp-bonus_en-us.png">
+                        </div>
+                    </div>
+
+                    <div class="tab-content clearfix ui-tabs-anchor ui-corner-bottom ui-widget-content" id="jprize" aria-labelledby="ui-id-2" role="tabpanel" aria-hidden="true">
+                        <h3 class="mb-3 c-sunglow uppercase text-left">Result Formula for 6+1D</h3>
+                        <div class="w-75 sm-100 m-auto-hori mb-3">
+                            <img class="w-100" src="../assets/images/KIMCO ICONS/djp-result_en-us.png">
+                        </div>
+                        <p>
+                            <span class="c-golden">Every Sunday</span> will be closing date for all the lucky numbers given in the past 7 days, and we will draw an additional number at the end of our 6D drawing to form the 6+1D result! So, don't throw away your receipt before Sunday draw, as every receipt maybe the ticket to be a newly born Millionaire~ Dream Come True!
+                        </p>
+                        <h3 class="mb-3 c-sunglow uppercase text-left">PRIZE STRUCTURE FOR 6+1D</h3>
+                        <div class="w-75 sm-100 m-auto-hori mb-3">
+                            <img class="w-100" src="../assets/images/KIMCO ICONS/djp-prize_en-us.png">
+                        </div>
+                    </div>
+                    <div class="tab-content clearfix ui-tabs-anchor ui-corner-bottom ui-widget-content" id="jfeature" aria-labelledby="ui-id-3" role="tabpanel" aria-hidden="true">
+                        <div class="mt-3 mb-5">
+                            <div class="font-family-lato-black text-left">
+                                <h2 class="c-sunglow mb-0 line-height-1">
+                                    6+1D UNLOCK YOUR JACKPOT QUALIFICATION!
+                                </h2>
+                            </div>
+
+                            <h4 class="text-danger">
+                                NOW EVERYONE CAN BET IN MORE DYNAMIC!
+                            </h4>
+
+                            <div class="mt-3">
+                                <p>
+                                    Now Everyone can bet in more dynamic! If you think spending
+                                    USD1 per 4D or 6D number is too much for your budget, then
+                                    just group with any combination of game type, including iBox
+                                    and make it USD3 in a single receipt.
+                                </p>
                             </div>
                         </div>
-                    </div>
-                </div>
+                        <div class="mb-5">
+                            <div class="font-family-lato-black text-left">
+                                <h2 class="c-sunglow mb-0 line-height-1">
+                                    ONE-ON-ONE WINNER STRUCTURE
+                                </h2>
+                            </div>
 
-                <div class="tab-container text-justify p-lg-3">
-                    <div class="tab-content clearfix ui-tabs-panel ui-corner-bottom ui-widget-content" id="d-prize" aria-labelledby="ui-id-1" role="tabpanel" aria-hidden="false">
-                        <div id="result">
-                            <div class="row">
-                                <div class="col-md-6 offset-md-3">
-                                    <div class="text-center mt-3">
-                                        <table class="res-tbl-1 res-tbl-1-yellow w-100">
-                                            <thead>
-                                                <tr>
-                                                    <th colspan="2">4D</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>1st Prize</td>
-                                                    <td class="res-add"><span class="r">
-                                                        <span id="cphBody_lbRS1x">(G)</span></span>
-                                                        <span id="cphBody_lbRS1">7207</span>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>2nd Prize</td>
-                                                    <td class="res-add"><span class="r">
-                                                        <span id="cphBody_lbRS2x">(F)</span></span>
-                                                        <span id="cphBody_lbRS2">8913</span>
+                            <h4 class="text-danger">
+                                NO MORE SHARE YOUR JACKPOT AWAY, AND THE FASTER WAY
+                                TO BE A MILLIONAIRE!
+                            </h4>
 
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>3rd Prize</td>
-                                                    <td class="res-add"><span class="r">
-                                                        <span id="cphBody_lbRS3x">(B)</span></span>
-                                                        <span id="cphBody_lbRS3">6283</span></td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
+                            <div class="mt-3">
+                                <div class="w-75 sm-100 m-auto-hori mb-3">
+                                    <img class="w-100" src="../assets/images/KIMCO ICONS/djp-winner_en-us.png">
+                                </div>
+                                <p>
+                                    The making of millionaire jackpot system! In this jackpot system, we will ensure only one winner at the end of the competition. Every randomly assigned of lucky number is always unique, so don't worry to share the jackpot with at least USD70,000 to other winners! To further extend your luck, we've made up 9
+                                    more unique consolation prizes worth USD3,000 each if you missed the grand prize, and it's also not sharing with others! Just strike the last 6 digits number and grab the full non-sharing payout of USD3,000 prize. If you're lucky enough, you may be assigned to more than one time to strike this USD3,000 prizes.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="mb-5">
+                            <div class="font-family-lato-black text-left">
+                                <h2 class="c-sunglow mb-0 line-height-1">
+                                    80% BONUS BRING FORWARD TABLE
+                                </h2>
+                            </div>
 
-                                    <div class="text-center mt-3">
-                                        <table class="res-tbl-2 res-tbl-2-yellow w-100">
-                                            <thead>
-                                                <tr>
-                                                    <th colspan="3">Special Prize</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td class="res-add"><span class="r">A</span>
-                                                        <span id="cphBody_lbRSA">2193</span></td>
-                                                    <td class="res-add"><span class="r">B</span>
-                                                        <span id="cphBody_lbRSB">----</span></td>
-                                                    <td class="res-add"><span class="r">C</span>
-                                                        <span id="cphBody_lbRSC">5737</span></td>
-                                                </tr>
+                            <h4 class="text-danger">
+                                IMAGINE IF THERE IS NO WINNER AFTER 6 WEEKS, AND WHAT IF YOU ARE THE NEXT WINNER?<br>
+                                WILL IT CHANGE YOUR LIFE?
+                            </h4>
 
-                                                <tr>
-                                                    <td class="res-add"><span class="r">D</span>
-                                                        <span id="cphBody_lbRSD">5553</span></td>
-                                                    <td class="res-add"><span class="r">E</span>
-                                                        <span id="cphBody_lbRSE">4905</span></td>
-                                                    <td class="res-add"><span class="r">F</span>
-                                                        <span id="cphBody_lbRSF">----</span></td>
-                                                </tr>
-
-                                                <tr>
-                                                    <td class="res-add"><span class="r">G</span>
-                                                        <span id="cphBody_lbRSG">----</span></td>
-                                                    <td class="res-add"><span class="r">H</span>
-                                                        <span id="cphBody_lbRSH">5763</span>
-                                                    </td>
-                                                    <td class="res-add"><span class="r">I</span>
-                                                        <span id="cphBody_lbRSI">1108</span></td>
-                                                </tr>
-
-                                                <tr>
-                                                    <td class="res-add"><span class="r">J</span>
-                                                        <span id="cphBody_lbRSJ">2733</span></td>
-                                                    <td class="res-add"><span class="r">K</span>
-                                                        <span id="cphBody_lbRSK">8283</span></td>
-                                                    <td class="res-add"><span class="r">L</span>
-                                                        <span id="cphBody_lbRSL">9976</span></td>
-                                                </tr>
-
-                                                <tr>
-                                                    <td colspan="3" class="res-add"><span class="r">M</span>
-                                                        <span id="cphBody_lbRSM">9378</span></td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-
-                                    <div class="text-center mt-3">
-                                        <table class="res-tbl-2 res-tbl-2-yellow w-100">
-                                            <thead>
-                                                <tr>
-                                                    <th colspan="3">Consolation Prize</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td class="res-add"><span class="r">N</span>
-                                                        <span id="cphBody_lbRSN">1664</span></td>
-                                                    <td class="res-add"><span class="r">O</span>
-                                                        <span id="cphBody_lbRSO">4198</span></td>
-                                                    <td class="res-add"><span class="r">P</span>
-                                                        <span id="cphBody_lbRSP">4714</span></td>
-                                                </tr>
-
-                                                <tr>
-                                                    <td class="res-add"><span class="r">Q</span>
-                                                        <span id="cphBody_lbRSQ">1755</span></td>
-                                                    <td class="res-add"><span class="r">R</span>
-                                                        <span id="cphBody_lbRSR">1893</span></td>
-                                                    <td class="res-add"><span class="r">S</span>
-                                                        <span id="cphBody_lbRSS">3399</span></td>
-                                                </tr>
-
-                                                <tr>
-                                                    <td class="res-add"><span class="r">T</span>
-                                                        <span id="cphBody_lbRST">4515</span></td>
-                                                    <td class="res-add"><span class="r">U</span>
-                                                        <span id="cphBody_lbRSU">1282</span></td>
-                                                    <td class="res-add"><span class="r">V</span>
-                                                        <span id="cphBody_lbRSV">7098</span></td>
-                                                </tr>
-
-                                                <tr>
-                                                    <td class="res-add" colspan="3"><span class="r">W</span>
-                                                        <span id="cphBody_lbRSW">5658</span></td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-
+                            <div class="mt-3">
+                                <div class="w-100 mb-3">
+                                    <img class="w-100" src="../assets/images/KIMCO ICONS/djp-table_en-us.png">
                                 </div>
                             </div>
-                            
                         </div>
-                        <hr class="dashed">
 
-                        <div class="row">
-                            <div class="col-md-6 text-center inline-block">
-                                <input id="inpPrizeJson" name="inpPrizeJson" hidden="">
-                                <table class="tbl-3 tbl-3--mod1" id="tblPrizeCalc">
-                                    <thead>
-                                        <tr class="uppercase">
-                                            <th colspan="4">Standard</th>
-                                        </tr>
-                                        <tr>
-                                            <th></th>
-                                            <th>Bet Number</th>
-                                            <th>Big ($)</th>
-                                            <th>Small ($)</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td></td>
-                                            <td>
-                                                <input class="w100" pattern="\d*" maxlength="6" minlength="4"></td>
-                                            <td>
-                                                <input class="w100" type="number" step="0.01" value="1.00"></td>
-                                            <td>
-                                                <input class="w100" type="number" step="0.01" value="1.00"></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-
-
+                        <div>
+                            <div class="font-family-lato-black text-left">
+                                <h3 class="c-sunglow mb-0 line-height-1">
+                                    RECEIPT SAMPLE
+                                </h3>
                             </div>
-
-                            <div class="col-md-6 text-center inline-block">
-                                <input id="inpPrizeJson2" name="inpPrizeJson2" hidden="">
-                                <table class="tbl-3 tbl-3--mod1" id="tblPrizeCalc2">
-                                    <thead>
-                                        <tr class="uppercase">
-                                            <th colspan="4">I-BOX</th>
-                                        </tr>
-                                        <tr>
-                                            <th></th>
-                                            <th>Bet Number</th>
-                                            <th>Big ($)</th>
-                                            <th>Small ($)</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td></td>
-                                            <td>
-                                                <input class="w100" pattern="\d*" maxlength="6" minlength="4"></td>
-                                            <td>
-                                                <input class="w100" type="number" step="0.01" value="1.00"></td>
-                                            <td>
-                                                <input class="w100" type="number" step="0.01" value="1.00"></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-
+                            <div class="mt-3">
+                                <div class="w-100">
+                                    <img class="w-100" src="../assets/images/KIMCO ICONS/djp-sample_en-us.png">
+                                </div>
                             </div>
                         </div>
-
-                        <div class="text-center pt-2">
-                            <button type="reset" class="btn-1 sm-100 mb-2 on-hover-pointer">RESET</button>
-                            <div class="btn-1 btn-1-red sm-100 inline-block uppercase" onclick="submitPrizeFo$()">Search</div>
-                            <input type="submit" name="ctl00$cphBody$btnSubmit" value="" id="cphBody_btnSubmit" hidden="">
-                        </div>
-
-                        <hr class="dashed">
-
-                        <div class="text-center">
-                            <h3 class="m-0 c-themered uppercase">Results</h3>
-                            
-                            <span class="txt15 font-weight-bold ">Sorry, no winnings currently. Please try again.</span>
-                            
-                        </div>
                     </div>
-                    <div class="tab-content clearfix ui-tabs-panel ui-corner-bottom ui-widget-content d-none" id="s-prize" aria-labelledby="ui-id-2" role="tabpanel" aria-hidden="true">
-                        <div class="center">
-                            COMING SOON
-                        </div>
-                    </div>
+                </div>
 
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" style="display: none;" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="exampleModalLabel">Choose PDF language : </h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="text-center">
+                    <a class="on-hover btn-1 btn-1-red w-50 inline-block mb-2" target="_blank" href="/pdf/6p1Dlotterygame_en-us.pdf?v=1.2" download=""><h4 class="text-white">English</h4></a><br>
+                    <a class="on-hover btn-1 btn-1-red w-50 inline-block mb-2" target="_blank" href="/pdf/6p1Dlotterygame_zh-cn.pdf?v=1.2" download=""><h4 class="text-white">中文</h4></a><br>
+                    <a class="on-hover btn-1 btn-1-red w-50 inline-block mb-2" target="_blank" href="/pdf/6p1Dlotterygame_ms-my.pdf?v=1.2" download=""><h4 class="text-white">B. Melayu</h4></a>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
     <!--Script-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -1612,19 +1515,31 @@ format, put in your bet value, then generate your winning prize.</div>
         });
         let nav1 = document.querySelectorAll(".ui-tabs-anchor")[0];
         let nav2 = document.querySelectorAll(".ui-tabs-anchor")[1];
+        let nav3 = document.querySelectorAll(".ui-tabs-anchor")[2];
 
-        let div1 = document.querySelector("#d-prize");
-        let div2 = document.querySelector("#s-prize");
+
+        let div1 = document.querySelector("#jstructure");
+        let div2 = document.querySelector("#jprize");
+        let div3 = document.querySelector("#jfeature");
 
         nav1.addEventListener("click", function () {
             div2.classList.add("d-none");
+            div3.classList.add("d-none");
             
             div1.classList.remove("d-none");
         });
          nav2.addEventListener("click", function () {
-            div1.classList.add("d-none");
+             div1.classList.add("d-none");
+             div3.classList.add("d-none");
             
             div2.classList.remove("d-none");
+        });
+
+        nav3.addEventListener("click", function () {
+             div1.classList.add("d-none");
+             div2.classList.add("d-none");
+            
+            div3.classList.remove("d-none");
         });
 
     </script>
