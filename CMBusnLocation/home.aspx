@@ -1183,6 +1183,16 @@ a {
                                         <li><a href="/results/watchlive/wechat">Watch Live in WeChat</a></li>
                                     </ul>
                                 </li>
+                                <li class="sub-menu"><a href="#" class="sf-with-ul">Jackpot</a>
+                                    <ul class="menu-pos-invert" id="L4" style="display: none;">
+                                        <li><a href="dragonJackpot.aspx">Dragon Jackpot 6+1D</a></li>
+                                        <li><a href="jackpot4D.aspx">4D Jackpot Tracker</a></li>
+                                        <li><a href="jackpotHowItWorks.aspx">How It Works?</a></li>
+                                        <li><a href="jackpotCalculator.aspx">Jackpot Calculator</a></li>
+                                        <li><a href="jackpotHowToWin.aspx">How to Win?</a></li>
+                                        <li><a href="jackpotSharingRules.aspx">Sharing Rules</a></li>
+                                    </ul>
+                                </li>
                                 <%--<li class="sub-menu"><a href="#" class="sf-with-ul">Jackpot</a>
                                     <ul style="display: none;">
                                         <li><a href="/jackpot/dragon-jackpot">Dragon Jackpot 6+1D</a></li>
