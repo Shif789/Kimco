@@ -1,0 +1,201 @@
+﻿<!--<nav id="primary-menu">-->
+<ul class="sf-js-enabled d-block" style="touch-action: pan-y;">
+    <li><a href="home.aspx">Home</a></li>
+    <li class="sub-menu" id="subM1">
+        <a href="#" class="sf-with-ul">Our Games</a>
+        <ul class="menu-pos-invert" id="L1" style="display:none;">
+
+            <li><a href="4D.aspx">KIM LOTTO 4D</a></li>
+            <li><a href="6D.aspx">KIM LOTTO 6D</a></li>
+            <li><a href="prize.aspx">Prize Structure</a></li>
+            <li><a href="Machine.aspx">Machine Design &amp; Spec</a></li>
+            <li><a href="How-to-draw.aspx">How We Draw?</a></li>
+        </ul>
+    </li>
+    <li class="sub-menu" id="subM2">
+        <a href="#" class="sf-with-ul">About Us</a>
+        <ul class="menu-pos-invert" id="L2" style="display:none;">
+            <li><a href="about-us.aspx">About Us</a></li>
+            <li><a href="long-long.aspx">About LONG LONG</a></li>
+            <li><a href="about-corporate-value.aspx">Our Corporate Value</a></li>
+            <li><a href="about-play-responsibility.aspx">Play Responsibility</a></li>
+            <li><a href="about-protect.aspx">Protect Yourself</a></li>
+            <li><a href="about-contact-us.aspx">Contact Us</a></li>
+        </ul>
+    </li>
+    <li class="sub-menu" id="subM3">
+        <a href="#" class="sf-with-ul">Results</a>
+        <ul class="menu-pos-invert" id="L3" style="display: none;">
+            <li><a href="resultToday.aspx">Today Result</a></li>
+            <li><a href="resultPast.aspx">Past Results</a></li>
+            <li><a href="resultJackpotWinner.aspx">6+1D Jackpot Winner</a></li>
+            <li><a href="resultDidIWin.aspx">Did I win?</a></li>
+            <li><a href="resultPrizeCal.aspx">Prize Calculator</a></li>
+            <li><a href="resultStatistics.aspx">Statistics</a></li>
+            <li><a href="resultWatchLiveApp.aspx">Watch Live in GDApp</a></li>
+            <li><a href="resultWatchLiveFB.aspx">Watch Live in FB</a></li>
+            <li><a href="resultWatchLiveWeb.aspx">Watch Live in Web</a></li>
+            <li><a href="resultWatchLiveWechat.aspx">Watch Live in WeChat</a></li>
+        </ul>
+    </li>
+    <li class="sub-menu" id="subM4">
+        <a href="#" class="sf-with-ul">Jackpot</a>
+        <ul class="menu-pos-invert" id="L4" style="display: none;">
+            <li><a href="dragonJackpot.aspx">Dragon Jackpot 6+1D</a></li>
+            <li><a href="jackpot4D.aspx">4D Jackpot Tracker</a></li>
+            <li><a href="jackpotHowItWorks.aspx">How It Works?</a></li>
+            <li><a href="jackpotCalculator.aspx">Jackpot Calculator</a></li>
+            <li><a href="jackpotHowToWin.aspx">How to Win?</a></li>
+            <li><a href="jackpotSharingRules.aspx">Sharing Rules</a></li>
+        </ul>
+    </li>
+    <!--
+    <li class="sub-menu">
+        <a href="#" class="sf-with-ul">The Community</a>
+        <ul style="display: none;">
+            <li><a href="/community">Connect Us</a></li>
+            <li><a href="/community/longlong">Long Long Dream Number</a></li>
+            <li><a href="/community/partner">Partner Program</a></li>
+            <li><a href="/community/our-videos">Our Videos</a></li>
+            <li><a href="http://blog.gdlotto.com/" target="_blank">Blog</a></li>
+        </ul>
+    </li>--%>
+
+    <%--
+    <li class="sub-menu">
+        <a href="#" class="sf-with-ul">
+            GDPOINTS
+        </a>
+        <ul class="menu-pos-invert" style="display: none;">
+            <li><a href="/gdpoints">GDPOINTS.COM</a></li>
+
+            <li><a href="/member/login.aspx">Login</a></li>
+            <li><a href="/member/signup.aspx">Sign Up</a></li>
+
+        </ul>
+    </li>
+
+    <li class="sub-menu">
+        <a href="#" class="sf-with-ul">ENG ▼</a>
+
+        <ul class="menu-pos-invert" style="display: none;">
+            <li onclick="doLangChg('en')"><a href="javascript:void(0)">ENGLISH</a></li>
+            <li onclick="doLangChg('cn')"><a href="javascript:void(0)">中文</a></li>
+            <li onclick="doLangChg('kh')"><a href="javascript:void(0)">KHMER</a></li>
+        </ul>
+    </li>--%>
+        -->
+</ul>
+
+    </<!--nav-->>
+<!--<script src="../Scripts/headerNew.js"></script>-->
+
+
+<script>
+    var x = window.matchMedia("(max-width: 991px)")
+    myFunction(x) // Call listener function at run time
+    x.addListener(myFunction) // Attach listener function on state changes
+    function myFunction(x) {
+        if (x.matches) { // If media query matches
+            document.querySelector("#primary-menu").classList.add("d-none");
+            document.querySelector("#primary-menu-trigger").addEventListener("click", function () {
+                document.querySelector("#primary-menu").classList.toggle("d-none");
+
+                document.querySelector("#subM1").addEventListener("click", function () {
+                    if (document.getElementById("L1").style.display == "none") {
+                        document.getElementById("L1").style.display = "block";
+                    } else {
+                        document.getElementById("L1").style.display = "none";
+                    }
+                    document.getElementById("L2").style.display = "none";
+                    document.getElementById("L3").style.display = "none";
+                    document.getElementById("L4").style.display = "none";
+
+                })
+                document.querySelectorAll(".sub-menu")[1].addEventListener("click", function () {
+                    if (document.getElementById("L2").style.display == "none") {
+                        document.getElementById("L2").style.display = "block";
+                    } else {
+                        document.getElementById("L2").style.display = "none";
+                    }
+                    document.getElementById("L1").style.display = "none";
+                    document.getElementById("L3").style.display = "none";
+                    document.getElementById("L4").style.display = "none";
+                })
+                document.querySelectorAll(".sub-menu")[2].addEventListener("click", function () {
+                    if (document.getElementById("L3").style.display == "none") {
+                        document.getElementById("L3").style.display = "block";
+                    } else {
+                        document.getElementById("L3").style.display = "none";
+                    }
+                    document.getElementById("L1").style.display = "none";
+                    document.getElementById("L2").style.display = "none";
+                    document.getElementById("L4").style.display = "none";
+                })
+                document.querySelectorAll(".sub-menu")[3].addEventListener("click", function () {
+                    if (document.getElementById("L4").style.display == "none") {
+                        document.getElementById("L4").style.display = "block";
+                    } else {
+                        document.getElementById("L4").style.display = "none";
+                    }
+                    document.getElementById("L1").style.display = "none";
+                    document.getElementById("L2").style.display = "none";
+                    document.getElementById("L3").style.display = "none";
+                })
+            })
+
+        } else {
+
+            document.querySelectorAll(".sub-menu")[0].addEventListener("mouseover", function () {
+                document.getElementById("L1").style.display = "block";
+                document.getElementById("L2").style.display = "none";
+                document.getElementById("L3").style.display = "none";
+                document.getElementById("L4").style.display = "none";
+                document.querySelectorAll(".sub-menu")[0].addEventListener("mouseout", function () {
+                    document.getElementById("L1").style.display = "none";
+                    document.getElementById("L2").style.display = "none";
+                    document.getElementById("L3").style.display = "none";
+                    document.getElementById("L4").style.display = "none";
+                })
+            })
+            document.querySelectorAll(".sub-menu")[1].addEventListener("mouseover", function () {
+                document.getElementById("L2").style.display = "block";
+                document.getElementById("L1").style.display = "none";
+                document.getElementById("L3").style.display = "none";
+                document.getElementById("L4").style.display = "none";
+                document.querySelectorAll(".sub-menu")[1].addEventListener("mouseout", function () {
+                    document.getElementById("L1").style.display = "none";
+                    document.getElementById("L2").style.display = "none";
+                    document.getElementById("L3").style.display = "none";
+                    document.getElementById("L4").style.display = "none";
+                })
+            })
+            document.querySelectorAll(".sub-menu")[2].addEventListener("mouseover", function () {
+                document.getElementById("L3").style.display = "block";
+                document.getElementById("L1").style.display = "none";
+                document.getElementById("L2").style.display = "none";
+                document.getElementById("L4").style.display = "none";
+                document.querySelectorAll(".sub-menu")[2].addEventListener("mouseout", function () {
+                    document.getElementById("L1").style.display = "none";
+                    document.getElementById("L2").style.display = "none";
+                    document.getElementById("L3").style.display = "none";
+                    document.getElementById("L4").style.display = "none";
+                })
+            })
+            document.querySelectorAll(".sub-menu")[3].addEventListener("mouseover", function () {
+                document.getElementById("L4").style.display = "block";
+                document.getElementById("L1").style.display = "none";
+                document.getElementById("L2").style.display = "none";
+                document.getElementById("L3").style.display = "none";
+                document.querySelectorAll(".sub-menu")[3].addEventListener("mouseout", function () {
+                    document.getElementById("L1").style.display = "none";
+                    document.getElementById("L2").style.display = "none";
+                    document.getElementById("L3").style.display = "none";
+                    document.getElementById("L4").style.display = "none";
+                })
+            })
+        }
+    }
+
+
+</script>

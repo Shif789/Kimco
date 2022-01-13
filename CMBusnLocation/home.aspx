@@ -1146,8 +1146,11 @@ a {
 
                         <!-- Primary Navigation
 					============================================= -->
+<%--                      <iframe src="kimcoMenu.html" onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove()"></iframe>--%>
+<%--                        <iframe src="kimcoMenu.html" onload="this.insertAdjacentHTML('afterend', (this.contentDocument.body||this.contentDocument).innerHTML);this.remove()"></iframe>--%>
+
                         <nav id="primary-menu">
-                            <ul class="sf-js-enabled d-block" style="touch-action: pan-y;">
+                            <%--<ul class="sf-js-enabled d-block" style="touch-action: pan-y;">
                                 <li><a href="home.aspx">Home</a></li>
                                 <li class="sub-menu"><a href="#" class="sf-with-ul">Our Games</a>
                                     <ul class="menu-pos-invert" id="l1" style="display:none;">
@@ -1231,8 +1234,8 @@ a {
                                         <li onclick="doLangChg('cn')"><a href="javascript:void(0)">中文</a></li>
                                         <li onclick="doLangChg('kh')"><a href="javascript:void(0)">KHMER</a></li>
                                     </ul>
-                                </li>--%>
-                            </ul>
+                                </li>
+                            </ul>--%>
 
                         </nav>
                         <!-- #primary-menu end -->
@@ -2022,10 +2025,7 @@ Wishing all Happy Christmas
     <!--Scripts-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/ccf7730c24.js"></script>
-    <script src="../Scripts/header.js"></script>
-    <script>
-        
-
-    </script>
+<%--    <script src="../Scripts/headerNew.js"></script>--%>
+    <script src="../Scripts/menu.js"></script>
 </asp:Content>
 

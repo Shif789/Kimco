@@ -7,7 +7,7 @@ function myFunction(x) {
         document.querySelector("#primary-menu-trigger").addEventListener("click", function () {
             document.querySelector("#primary-menu").classList.toggle("d-none");
 
-            document.querySelectorAll(".sub-menu")[0].addEventListener("click", function () {
+            document.querySelector("#subM1").addEventListener("click", function () {
                 if (document.getElementById("L1").style.display == "none") {
                     document.getElementById("L1").style.display = "block";
                 } else {

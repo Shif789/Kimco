@@ -561,8 +561,9 @@
 
                         <!-- Primary Navigation
 					============================================= -->
-                        <nav id="primary-menu">
-                            <ul class="sf-js-enabled d-block" style="touch-action: pan-y;">
+<%--                        <iframe src="kimcoMenu.html" onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove()"></iframe>--%>
+                       <nav id="primary-menu">
+                            <%--<ul class="sf-js-enabled d-block" style="touch-action: pan-y;">
                                 <li><a href="home.aspx">Home</a></li>
                                 <li class="sub-menu"><a href="#" class="sf-with-ul">Our Games</a>
                                     <ul class="menu-pos-invert" id="L1" style="display:none;">
@@ -636,8 +637,8 @@
                                         <li onclick="doLangChg('cn')"><a href="javascript:void(0)">中文</a></li>
                                         <li onclick="doLangChg('kh')"><a href="javascript:void(0)">KHMER</a></li>
                                     </ul>
-                                </li>--%>
-                            </ul>
+                                </li>
+                            </ul>--%>
 
                         </nav>
                         <!-- #primary-menu end -->

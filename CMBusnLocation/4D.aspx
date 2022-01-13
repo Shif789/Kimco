@@ -335,11 +335,13 @@
 
                         <!-- Primary Navigation
 					============================================= -->
+<%--                      <iframe src="kimcoMenu.html" onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove()"></iframe>--%>
+<%--                                                <iframe src="kimcoMenu.html" onload="this.insertAdjacentHTML('afterend', (this.contentDocument.body||this.contentDocument).innerHTML);this.remove()"></iframe>--%>
                         <nav id="primary-menu">
-                           <ul class="sf-js-enabled d-block" style="touch-action: pan-y;">
+                            <%--<ul class="sf-js-enabled d-block" style="touch-action: pan-y;">
                                 <li><a href="home.aspx">Home</a></li>
                                 <li class="sub-menu"><a href="#" class="sf-with-ul">Our Games</a>
-                                    <ul class="menu-pos-invert" id="L1" style="display:none;">
+                                    <ul class="menu-pos-invert" id="l1" style="display:none;">
                                         
                                         <li><a href="4D.aspx">KIM LOTTO 4D</a></li>
                                         <li><a href="6D.aspx">KIM LOTTO 6D</a></li>
@@ -349,7 +351,7 @@
                                     </ul>
                                 </li>
                                 <li class="sub-menu"><a href="#" class="sf-with-ul">About Us</a>
-                                    <ul class="menu-pos-invert" id="L2" style="display:none;">
+                                    <ul class="menu-pos-invert" id="l2" style="display:none;">
                                         <li><a href="about-us.aspx">About Us</a></li>
                                         <li><a href="long-long.aspx">About LONG LONG</a></li>
                                         <li><a href="about-corporate-value.aspx">Our Corporate Value</a></li>
@@ -359,17 +361,17 @@
                                     </ul>
                                 </li>
                                 <li class="sub-menu"><a href="#" class="sf-with-ul">Results</a>
-                                    <ul class="menu-pos-invert" id="L3" style="display: none;">
+                                    <ul class="menu-pos-invert" id="l3" style="display: none;">
                                         <li><a href="resultToday.aspx">Today Result</a></li>
-                                        <li><a href="resultPast.aspx">Past Results</a></li>
-                                        <li><a href="resultJackpotWinner.aspx">6+1D Jackpot Winner</a></li>
-                                        <li><a href="resultDidIWin.aspx">Did I win?</a></li>
-                                        <li><a href="resultPrizeCal.aspx">Prize Calculator</a></li>
-                                        <li><a href="resultStatistics.aspx">Statistics</a></li>
-                                        <li><a href="resultWatchLiveApp.aspx">Watch Live in GDApp</a></li>
-                                        <li><a href="resultWatchLiveFB.aspx">Watch Live in FB</a></li>
-                                        <li><a href="resultWatchLiveWeb.aspx">Watch Live in Web</a></li>
-                                        <li><a href="resultWatchLiveWechat.aspx">Watch Live in WeChat</a></li>
+                                        <li><a href="/results/past">Past Results</a></li>
+                                        <li><a href="/results/dragon-jackpot-winner">6+1D Jackpot Winner</a></li>
+                                        <li><a href="/results/did-i-win">Did I win?</a></li>
+                                        <li><a href="/results/prize-calculator">Prize Calculator</a></li>
+                                        <li><a href="/results/statistics">Statistics</a></li>
+                                        <li><a href="/results/watchlive/app">Watch Live in GDApp</a></li>
+                                        <li><a href="/results/watchlive/fb">Watch Live in FB</a></li>
+                                        <li><a href="/results/watchlive/web">Watch Live in Web</a></li>
+                                        <li><a href="/results/watchlive/wechat">Watch Live in WeChat</a></li>
                                     </ul>
                                 </li>
                                 <li class="sub-menu"><a href="#" class="sf-with-ul">Jackpot</a>
@@ -382,7 +384,17 @@
                                         <li><a href="jackpotSharingRules.aspx">Sharing Rules</a></li>
                                     </ul>
                                 </li>
-                                <%--<li class="sub-menu"><a href="#" class="sf-with-ul">The Community</a>
+                                <%--<li class="sub-menu"><a href="#" class="sf-with-ul">Jackpot</a>
+                                    <ul style="display: none;">
+                                        <li><a href="/jackpot/dragon-jackpot">Dragon Jackpot 6+1D</a></li>
+                                        <li><a href="/jackpot/tracker">4D Jackpot Tracker</a></li>
+                                        <li><a href="/jackpot/how-it-works">How It Works?</a></li>
+                                        <li><a href="/jackpot/calculator">Jackpot Calculator</a></li>
+                                        <li><a href="/jackpot/how-to-win">How to Win?</a></li>
+                                        <li><a href="/jackpot/sharing-rules">Sharing Rules</a></li>
+                                    </ul>
+                                </li>
+                                <li class="sub-menu"><a href="#" class="sf-with-ul">The Community</a>
                                     <ul style="display: none;">
                                         <li><a href="/community">Connect Us</a></li>
                                         <li><a href="/community/longlong">Long Long Dream Number</a></li>
@@ -410,8 +422,8 @@
                                         <li onclick="doLangChg('cn')"><a href="javascript:void(0)">中文</a></li>
                                         <li onclick="doLangChg('kh')"><a href="javascript:void(0)">KHMER</a></li>
                                     </ul>
-                                </li>--%>
-                            </ul>
+                                </li>
+                            </ul>--%>
 
                         </nav>
                         <!-- #primary-menu end -->
@@ -934,7 +946,7 @@
     </div>
     <!--Scripts-->
     <script src="https://kit.fontawesome.com/ccf7730c24.js"></script>
-    <script src="../Scripts/header.js"></script>
+<%--    <script src="../Scripts/header.js"></script>--%>
     <script>
         let nav1 = document.querySelectorAll(".nav-link")[0];
         let nav2 = document.querySelectorAll(".nav-link")[1];
